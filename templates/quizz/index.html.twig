@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello QuizzController!
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center mt-5">QUIZZ</h1>
+
+	<main id="quizz" class="container-fluid">
+		<form
+			class="row g-3 ">
+			{# <div class="form-check">
+			                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+			                    <label class="form-check-label" for="flexCheckDefault">
+			                        Option Hiver
+			                    </label>
+			                </div> #}
+
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+				<label class="form-check-label" for="flexCheckDefault">
+					Chronométré
+				</label>
+			</div>
+
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onchange="myFunction2()" checked>
+				<label class="form-check-label" for="exampleRadios1">
+					Plantes aléatoire
+				</label>
+			</div>
+
+			<div class="form-check mb-5">
+				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onchange="myFunction()">
+				<label class="form-check-label" for="exampleRadios2">
+					Choisir les plantes
+				</label>
+			</div>
+		</form>
+	</main>
+
+	<div class="d-flex flex-column align-items-center">
+		<div class="col-auto" id="masked">
+			<button type="btn" class="btn btn-primary mb-3 quizz-btn px-3">Selectionnez vos plantes</button>
+		</div>
+
+		<div class="col-auto">
+			<button type="submit" class="btn btn-primary mb-3 quizz-btn px-3">Commencer</button>
+		</div>
+	</div>
+
+
+{% endblock %}
+
