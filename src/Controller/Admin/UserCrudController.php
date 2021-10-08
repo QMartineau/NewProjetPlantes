@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
@@ -27,7 +28,8 @@ class UserCrudController extends AbstractCrudController
                     ->setChoices([  
                             'Elève' => 'ROLE_USER',
                             'Formateur' => 'ROLE_ADMIN'
-                            ])
+                            ]),
+            BooleanField::new('is_verified'),
         ];
     }
 }
