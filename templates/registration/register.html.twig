@@ -7,15 +7,26 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
+    <h1 class="text-center">Créer un compte</h1>
+    <div class="col-6 mx-auto d-flex flex-column align-items-center">
+
 
     {{ form_start(registrationForm) }}
+        <div class="justify-content-between">
+
         {{ form_row(registrationForm.email) }}
+        </div>
+
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
+        
         {{ form_row(registrationForm.agreeTerms) }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
 
-        <button type="submit" class="btn">Register</button>
     {{ form_end(registrationForm) }}
+    </div>
+
 {% endblock %}
