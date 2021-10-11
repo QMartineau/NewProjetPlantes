@@ -389,3 +389,23 @@ footer>ul>li:hover {
 #gototop{
 	color: white;	
 }
+
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(1)>div,
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(2) {
+	display: flex;
+	justify-content: space-around;
+}
+
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(3){
+	
+}
+
+
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form{
+	width: 100%;
+}
+
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(1)>div>label,
+body>div.col-6.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(2)>label {
+	width: 70px;
+}
