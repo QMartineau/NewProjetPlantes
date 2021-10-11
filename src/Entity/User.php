@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -56,6 +58,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Qcm::class)
+     */
+    private $idQcm;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Plantes::class)
+     */
+    private $formation;
+
+    public function __construct()
+    {
+        $this->idQcm = new ArrayCollection();
+        $this->formation = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -186,6 +204,54 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Qcm[]
+     */
+    public function getIdQcm(): Collection
+    {
+        return $this->idQcm;
+    }
+
+    public function addIdQcm(Qcm $idQcm): self
+    {
+        if (!$this->idQcm->contains($idQcm)) {
+            $this->idQcm[] = $idQcm;
+        }
+
+        return $this;
+    }
+
+    public function removeIdQcm(Qcm $idQcm): self
+    {
+        $this->idQcm->removeElement($idQcm);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Plantes[]
+     */
+    public function getFormation(): Collection
+    {
+        return $this->formation;
+    }
+
+    public function addFormation(Plantes $formation): self
+    {
+        if (!$this->formation->contains($formation)) {
+            $this->formation[] = $formation;
+        }
+
+        return $this;
+    }
+
+    public function removeFormation(Plantes $formation): self
+    {
+        $this->formation->removeElement($formation);
 
         return $this;
     }
