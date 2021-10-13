@@ -44,7 +44,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="json", length=255, nullable=true)
      */
     private $roles;
 
@@ -108,6 +108,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getUsername(): string
     {
         return (string) $this->email;
+    }
+
+    public function __toString() /*convertir les dates en string */
+    {
+        return $this->getRoles();
+
     }
 
     /**

@@ -47,7 +47,14 @@
 									<p class="d-flex justify-content-end justify-content-around">
 										{% if app.user %}
 											<a href="logout" class="btn btn-primary my-2 ">Deconnexion</a>
+											{% if is_granted('ROLE_ADMIN') %}
+												<div class="d-flex justify-content-around">
+													<a href="admin" class="btn btn-warning">ADMIN</a>
+												</div>
+											{% endif %}
 										{% else %}
+										
+
 											<a href="/login" class="btn btn-primary my-2 me-4">Connexion</a>
 											<a href="register" class="btn btn-secondary my-2">Inscription</a>
 										{% endif %}

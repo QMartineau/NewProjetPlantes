@@ -51,7 +51,7 @@ span, p, button, li {
 }
 header {
 	background-image: url(/images/chrysantem.jpg);
-	min-height: 40%;
+	min-height: 25%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;	
 }
@@ -350,7 +350,7 @@ aside>p>span {
 }
 #fin {
 	background-image: url(/images/chrysantem.jpg);
-	min-height: 40%;
+	min-height: 25%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	display: flex;
