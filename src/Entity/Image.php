@@ -19,12 +19,6 @@ class Image
      */
     private $id;
 
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $avecFeilles;
-
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -60,17 +54,6 @@ class Image
         return $this->id;
     }
 
-    public function getAvecFeilles(): ?string
-    {
-        return $this->avecFeilles;
-    }
-
-    public function setAvecFeilles(?string $avecFeilles): self
-    {
-        $this->avecFeilles = $avecFeilles;
-
-        return $this;
-    }
 
     public function getAvecFleurs(): ?string
     {
