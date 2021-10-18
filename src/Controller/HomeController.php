@@ -3,10 +3,12 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Plantes;
 use App\Repository\PlantesRepository;
+use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Plantes;
 
 class HomeController extends AbstractController
 {
@@ -19,16 +21,16 @@ class HomeController extends AbstractController
     }
 
     #[Route('/home/{id}', name: 'home_single')]
-    public function showSingleEvent(int $id , PlantesRepository $PlantesRepository): Response
+    public function showSingleEvent(int $id , PlantesRepository $plantesRepository): Response
     {
         
-        $Image = $PlantesRepository->find($id) ;
-        if (!$Image) {
+        $Plantes = $plantesRepository->find($id) ;
+        if (!$Plantes) {
             throw $this->createNotFoundException('La table est vide');
         }
             
-        return $this->render('home/single.html.twig', [
-            'Image' => $Image
+        return $this->render('home/test.html.twig', [
+            'Plantes' => $Plantes
         ]);
     }
 }
