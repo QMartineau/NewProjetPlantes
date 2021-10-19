@@ -45,7 +45,7 @@ class Plantes
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="plantesId")
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="plantes")
      */
     private $imageId;
 
