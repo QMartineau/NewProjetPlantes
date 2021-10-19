@@ -33,15 +33,20 @@ class Plantes
     private $Cultivar;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $Verified;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Image::class, inversedBy="planteId")
      * @ORM\JoinColumn(nullable=false)
      */
     private $idImage;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
 
     public function getId(): ?int
     {
@@ -85,18 +90,6 @@ class Plantes
     }
 
 
-    public function getVerified(): ?bool
-    {
-        return $this->Verified;
-    }
-
-    public function setVerified(bool $Verified): self
-    {
-        $this->Verified = $Verified;
-
-        return $this;
-    }
-
     public function getIdImage(): ?Image
     {
         return $this->idImage;
@@ -105,6 +98,30 @@ class Plantes
     public function setIdImage(?Image $idImage): self
     {
         $this->idImage = $idImage;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
 
         return $this;
     }
