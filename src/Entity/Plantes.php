@@ -33,15 +33,9 @@ class Plantes
     private $Cultivar;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="plantes")
      */
-    private $Verified;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Image::class, inversedBy="planteId")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $idImage;
+    private $imageId;
 
     public function getId(): ?int
     {
@@ -84,27 +78,32 @@ class Plantes
         return $this;
     }
 
-
-    public function getVerified(): ?bool
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImageId(): Collection
     {
-        return $this->Verified;
+        return $this->imageId;
     }
 
-    public function setVerified(bool $Verified): self
+    public function addImageId(Image $imageId): self
     {
-        $this->Verified = $Verified;
+        if (!$this->imageId->contains($imageId)) {
+            $this->imageId[] = $imageId;
+            $imageId->setPlantes($this);
+        }
 
         return $this;
     }
 
-    public function getIdImage(): ?Image
+    public function removeImageId(Image $imageId): self
     {
-        return $this->idImage;
-    }
-
-    public function setIdImage(?Image $idImage): self
-    {
-        $this->idImage = $idImage;
+        if ($this->imageId->removeElement($imageId)) {
+            // set the owning side to null (unless already changed)
+            if ($imageId->getPlantes() === $this) {
+                $imageId->setPlantes(null);
+            }
+        }
 
         return $this;
     }

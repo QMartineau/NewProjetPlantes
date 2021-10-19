@@ -30,14 +30,9 @@ class Image
     private $avecFruits;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity=Plantes::class, inversedBy="imageId")
      */
-    private $cultivar;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Plantes::class, mappedBy="idImage")
-     */
-    private $planteId;
+    private $plantes;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -46,7 +41,7 @@ class Image
 
     public function __construct()
     {
-        $this->planteId = new ArrayCollection();
+        $this->plantes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -79,44 +74,14 @@ class Image
         return $this;
     }
 
-    public function getCultivar(): ?string
+    public function getPlantesId(): ?Plantes
     {
-        return $this->cultivar;
+        return $this->plantes;
     }
 
-    public function setCultivar(?string $cultivar): self
+    public function setPlantesId(?Plantes $plantes): self
     {
-        $this->cultivar = $cultivar;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Plantes[]
-     */
-    public function getPlanteId(): Collection
-    {
-        return $this->planteId;
-    }
-
-    public function addPlanteId(Plantes $planteId): self
-    {
-        if (!$this->planteId->contains($planteId)) {
-            $this->planteId[] = $planteId;
-            $planteId->setIdImage($this);
-        }
-
-        return $this;
-    }
-
-    public function removePlanteId(Plantes $planteId): self
-    {
-        if ($this->planteId->removeElement($planteId)) {
-            // set the owning side to null (unless already changed)
-            if ($planteId->getIdImage() === $this) {
-                $planteId->setIdImage(null);
-            }
-        }
+        $this->plantes = $plantes;
 
         return $this;
     }
