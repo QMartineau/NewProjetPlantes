@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PlantesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,12 +35,6 @@ class Plantes
     private $Cultivar;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Image::class, inversedBy="planteId")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $idImage;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $image;
@@ -47,6 +43,16 @@ class Plantes
      * @ORM\Column(type="string", length=255)
      */
     private $nom;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="plantesId")
+     */
+    private $imageId;
+
+    public function __construct()
+    {
+        $this->imageId = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -90,18 +96,6 @@ class Plantes
     }
 
 
-    public function getIdImage(): ?Image
-    {
-        return $this->idImage;
-    }
-
-    public function setIdImage(?Image $idImage): self
-    {
-        $this->idImage = $idImage;
-
-        return $this;
-    }
-
     public function getImage(): ?string
     {
         return $this->image;
@@ -122,6 +116,36 @@ class Plantes
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImageId(): Collection
+    {
+        return $this->imageId;
+    }
+
+    public function addImageId(Image $imageId): self
+    {
+        if (!$this->imageId->contains($imageId)) {
+            $this->imageId[] = $imageId;
+            $imageId->setPlantes($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImageId(Image $imageId): self
+    {
+        if ($this->imageId->removeElement($imageId)) {
+            // set the owning side to null (unless already changed)
+            if ($imageId->getPlantes() === $this) {
+                $imageId->setPlantes(null);
+            }
+        }
 
         return $this;
     }

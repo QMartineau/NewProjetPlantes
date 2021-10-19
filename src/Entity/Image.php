@@ -32,21 +32,16 @@ class Image
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $cultivar;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Plantes::class, mappedBy="idImage")
-     */
-    private $planteId;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $avecFeuilles;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Plantes::class, inversedBy="imageId")
+     */
+    private $plantes;
 
     public function __construct()
     {
-        $this->planteId = new ArrayCollection();
+        $this->plantesId = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -79,48 +74,6 @@ class Image
         return $this;
     }
 
-    public function getCultivar(): ?string
-    {
-        return $this->cultivar;
-    }
-
-    public function setCultivar(?string $cultivar): self
-    {
-        $this->cultivar = $cultivar;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Plantes[]
-     */
-    public function getPlanteId(): Collection
-    {
-        return $this->planteId;
-    }
-
-    public function addPlanteId(Plantes $planteId): self
-    {
-        if (!$this->planteId->contains($planteId)) {
-            $this->planteId[] = $planteId;
-            $planteId->setIdImage($this);
-        }
-
-        return $this;
-    }
-
-    public function removePlanteId(Plantes $planteId): self
-    {
-        if ($this->planteId->removeElement($planteId)) {
-            // set the owning side to null (unless already changed)
-            if ($planteId->getIdImage() === $this) {
-                $planteId->setIdImage(null);
-            }
-        }
-
-        return $this;
-    }
-
     public function getAvecFeuilles(): ?string
     {
         return $this->avecFeuilles;
@@ -129,6 +82,18 @@ class Image
     public function setAvecFeuilles(?string $avecFeuilles): self
     {
         $this->avecFeuilles = $avecFeuilles;
+
+        return $this;
+    }
+
+    public function getPlantes(): ?Plantes
+    {
+        return $this->plantes;
+    }
+
+    public function setPlantes(?Plantes $plantes): self
+    {
+        $this->plantes = $plantes;
 
         return $this;
     }
