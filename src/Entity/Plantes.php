@@ -49,6 +49,11 @@ class Plantes
      */
     private $imageId;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
     public function __construct()
     {
         $this->imageId = new ArrayCollection();
@@ -146,6 +151,18 @@ class Plantes
                 $imageId->setPlantes(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
