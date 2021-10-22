@@ -39,6 +39,11 @@ class Image
      */
     private $plantes;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
     public function __construct()
     {
         $this->plantesId = new ArrayCollection();
@@ -94,6 +99,18 @@ class Image
     public function setPlantes(?Plantes $plantes): self
     {
         $this->plantes = $plantes;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
