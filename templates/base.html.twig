@@ -47,10 +47,8 @@
 									<p class="d-flex justify-content-end justify-content-around">
 										{% if app.user %}
 											<a href="logout" class="btn btn-primary my-2 ">Deconnexion</a>
-											{% if is_granted('ROLE_ADMIN') %}
-												<div class="d-flex justify-content-around">
-													<a href="admin" class="btn btn-warning">ADMIN</a>
-												</div>
+											{% if is_granted('ROLE_ADMIN') %}												
+												<a href="admin" class="btn btn-warning my-2">ADMIN</a>												
 											{% endif %}
 										{% else %}
 										
@@ -72,8 +70,8 @@
 							Langue
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="index.php?lang=fr"><img src="../images/francais.png">Français</a>
-							<a class="dropdown-item" href="index.php?lang=en"><img src="../images/anglais.png">Anglais</a>
+							<a class="dropdown-item" href="home"><img src="../images/francais.png">Français</a>
+							<a class="dropdown-item" href="home/en"><img src="../images/anglais.png">Anglais</a>
 							<a class="dropdown-item" href="#"><img src="../images/allemand.png">Allemand</a>
 							<a class="dropdown-item" href="#"><img src="../images/italien.png">Italien</a>
 							<a class="dropdown-item" href="#"><img src="../images/espagnol.png">Espagnol</a>
