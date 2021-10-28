@@ -23,7 +23,10 @@
 		<div id="quizz">
 			{% if app.user %}
 				<a href="quizz" class="button button-sign-in popup-button" data-modal="popup">
-				{% endif %}
+			{% else %}
+				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
+
+			{% endif %}
 				<button class="btq">Quizz Normal</button>
 			</a>
 			{% if app.user %}
