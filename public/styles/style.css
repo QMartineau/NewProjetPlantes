@@ -50,7 +50,7 @@ span, p, button, li {
 	font-family: 'Poppins', sans-serif;
 }
 header {
-	background-image: url(/images/flowersw.jpg);
+	background-image: url(/images/plantes/flowersw.jpg);
 	min-height: 40%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;	
@@ -215,7 +215,7 @@ header>button:first-child {
 }
 #plante {
 	min-height: 400px;
-	background-image: url(/images/abeliaun.jpg);
+	background-image: url(/images/plantes/abeliaun.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
@@ -248,7 +248,7 @@ section:first-of-type>h2 {
 }
 #arbre {
 	min-height: 400px;
-	background-image: url(/images/flowerss.jpg);
+	background-image: url(/images/plantes/flowerss.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
@@ -314,7 +314,7 @@ section:last-of-type>h2 {
 }
 #fleur {
 	min-height: 400px;
-	background-image: url(/images/rose.jpg);
+	background-image: url(/images/plantes/rose.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
@@ -349,7 +349,7 @@ aside>p>span {
 	text-decoration: underline;
 }
 #fin {
-	background-image: url(/images/flowersw.jpg);
+	background-image: url(/images/plantes/flowersw.jpg);
 	min-height: 40%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
