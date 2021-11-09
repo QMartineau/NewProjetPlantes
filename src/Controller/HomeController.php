@@ -19,19 +19,20 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-
-    #[Route('/home/plantes', name: 'home')]
+    
+    #[Route('/home/plantes', name: 'listing')]
     public function ToutLesPlantes( PlantesRepository $plantesRepository): Response
     {
         
         $Plantes = $plantesRepository->findAll() ;
-            
+        
         return $this->render('home/test.html.twig', [
             'Plantes' => $Plantes
         ]);
     }
 
-    #[Route('/home/{id}', name: 'home')]
+
+    #[Route('/home/{id}', name: 'single')]
     public function showSingleEvent(int $id , PlantesRepository $plantesRepository): Response
     {
         
@@ -39,11 +40,12 @@ class HomeController extends AbstractController
         if (!$Plante) {
             throw $this->createNotFoundException('La table est vide');
         }
-            
+        
         return $this->render('home/single.html.twig', [
             'Plante' => $Plante
         ]);
     }
+    
 }
 
 
