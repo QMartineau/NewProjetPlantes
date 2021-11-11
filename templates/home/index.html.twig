@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DocumentationController!
+{% block title %}Ouvrier du paysage
 {% endblock %}
 
 {% block body %}
@@ -12,8 +12,7 @@
 	</div>
 	<section>
 		<h2>Description</h2>
-		<p>On rencontre parfois en français la graphie quizz, peut-être à cause d'une confusion avec les formes fléchies ou dérivées en anglais où le z est doublé (quizzes, quizzical...).
-				Un quiz (prononcé « kiz » ou « kouïz ») est un jeu qui consiste en un questionnaire permettant de tester des connaissances générales ou spécifiques ou des compétences. Un quiz se pratique seul ou à plusieurs, suivant des procédures plus ou moins élaborées. Il peut se présenter sous formes de questionnaire à choix multiples ou de questionnaire simple, mais la différence majeure avec un autre test de connaissances ou de personnalité est qu'on attend du participant une réponse non développée d'un ou deux mots.</p>
+		<p>Si vous souhaitez faire un quizz basique, sélectionnez QUIZZ NORMAL, si vous souhaitez un peu plus de challenge, vous pouvez faire un quizz chronométré.</p>
 	</section>
 	<div class="img" id="arbre">
 		<span>Arbres</span>
@@ -41,79 +40,9 @@
 		<span>Fleurs</span>
 	</div>
 	<aside>
-		<h2>Les avis de nos derniers utilisateurs !</h2>
-		<p>
-			<span>Elaina</span>
-			: "Oh mon Dieu ! c'est Quizz Plantastic !"</p>
-		<p>
-			<span>RealityCookie</span>
-			: "Guérir le monde avec Quizz Plantastic"
-
-
-
-			</p>
-		<p>
-			<span>DylanVador</span>
-			: "Il y a certaines choses qui ne s'achètent pas, pour tout le reste il y a Quizz Plantastic"</p>
-		<p>
-			<span>Amasoft</span>
-			: "Jérôme vous facilite la vie"</p>
-		<p>
-			<span>Egiljorik</span>
-			: "Ours !"</p>
+		
 	</aside>
 	<div class="img" id="fin"></div>
-	<!-- Modal -->
-
-	<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div id="mod" class="modal-dialog" role="document" data-placement="left" data-toggle="tooltip" data-html="true" title="Vous pouvez tester en vous connectant avec les identifiants:<br><b>Identifiant</b> : <i>test@test.fr</i><br><b>Mot de passe</b> : <i>Tester_1!</i><br><u>et démarrer les quizz plus bas dans la page</u>">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form method="post">
-					<div class="modal-body">
-						<input type="email" name="email" placeholder="Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
-						<input type="password" name="password" placeholder="Mot de passe" id="mdp" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-						<div id="check"><input type="checkbox" name="remember" value="1">Rester connecté</div>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" id="bt">Se connecter</button>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="fermer">Fermer</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Inscription</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form method="post">
-					<div class="modal-body">
-						<input type="text" name="nom" placeholder="Nom" id="nom" required><br>
-						<input type="text" name="prenom" placeholder="Prénom" id="prenom" required>
-						<input type="email" name="email" placeholder="Email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
-						<input type="password" name="password" placeholder="Mot de passe" id="mdp1" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-						<input type="password" name="repeatpassword" placeholder="Répéter le mot de passe" id="mdp2" pattern="(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required><br>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" name="submit" class="btn btn-primary" id="bt">S'inscrire</button>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="fermer">Fermer</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
 	
 {% endblock %}
 

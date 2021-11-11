@@ -7,6 +7,7 @@ h1{
     font-family: 'Stick No Bills', sans-serif;
     font-size: 3em;
     letter-spacing: 8px;
+	
 }
 
 .form-check, .form-check-label, .quizz-btn{
@@ -51,96 +52,15 @@ span, p, button, li {
 }
 header {
 	background-image: url(/images/plantes/flowersw.jpg);
-	min-height: 40%;
+	min-height: 65%;
 	background-attachment: fixed;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	
 }
 .img {
 	position: relative;
     background-position: center;
     background-size: cover;
-}
-.error{
-	display: flex;
-	justify-content: center;
-	background-color: red;
-	color: white;
-}
-#tete {
-	display: flex;
-	justify-content: space-between;
-	padding: 2% 4% 0 4%;
-}
-#tete2 {
-	justify-content: flex-end;
-}
-header>button:first-child {
-	background-color: rgba(40, 61, 112, 0.9);
-	height: 6%;
-	width: 2.5%;
-	border: none;
-	border-radius: 20%;
-	box-shadow: none;
-	outline: none;
-	cursor: pointer;
-}
-#btd {
-	background-color: rgba(40, 61, 112, 0.9);
-	border: none;
-	color: white;
-	border-radius: 4px;
-	width: 105%;
-	height: 100%;
-	text-transform: uppercase;
-}
-#btd:hover {
-	background-color: rgba(40, 61, 112, 0.7);
-}
-#btd>i {
-	margin-left: 5%;
-}
-#bt {
-	background-color: rgba(40, 61, 112, 0.9);
-}
-#bt:hover {
-	background-color: rgba(40, 61, 112, 0.7);
-}
-#fermer {
-	background-color: rgba(43, 43, 43, 0.9);
-}
-#fermer:hover {
-	background-color: rgba(43, 43, 43, 0.7);
-}
-#email {
-	margin: 0 0 2% 5%;
-}
-#mdp {
-	margin-left: 5%;
-	margin-bottom: 2%;
-}
-#check {
-	margin-left: 5%;
-}
-#check>input {
-	margin-right: 1%;
-}
-#nom {
-	margin: 0 0 2% 5%;
-}
-#prenom {
-	float: right;
-	margin: -8.5% 5% 0 0;
-}
-#mail {
-	margin: 0 5% 2% 5%;
-	width: 90%;
-}
-#mdp1 {
-	margin-left: 5%;
-}
-#mdp2 {
-	float: right;
-	margin-right: 5%;
 }
 
 #dropdownMenuButton {
@@ -149,57 +69,9 @@ header>button:first-child {
 #dropdownMenuButton:hover {
 	background-color: rgba(40, 61, 112, 0.7);
 }
-.dropdown-item:nth-of-type(6n) {
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n):hover{
-	background-color: white;
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+5) {
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+5):hover{
-	background-color: white;
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+4) {
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+4):hover{
-	background-color: white;
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+3) {
-	color: grey;
-}
-.dropdown-item:nth-of-type(6n+3):hover{
-	background-color: white;
-	color: grey;
-}
+
 .dropdown-item>img {
 	margin-right: 5%;
-}
-#titre {
-	position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-}
-#titre>h1 {
-	margin: 0;
-	width: 32%;
-	margin-left: 34%;
-}
-#titre>h1 , #titre>span {
-	background-color: rgba(40, 61, 112, 0.9);
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
 }
 
 #plant {
@@ -237,7 +109,7 @@ section:first-of-type {
 	color: #fff;
 }
 section:first-of-type>p {
-	text-align: justify;
+	text-align: center;
 }
 section:first-of-type>h2 {
 	text-align: center;
@@ -379,7 +251,7 @@ footer>ul>li:hover {
 }
 
 #langue{
-	margin-top: 5%;
+	margin-top: 8%;
 }
 
 #navbar{
@@ -396,8 +268,12 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(4),
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(5) {
 	display: flex;
-	justify-content: space-around;
-	margin-bottom: 10%;
+	justify-content: space-between;
+	margin-bottom: 5%;
+}
+
+body > div.col-8.mx-auto.d-flex.flex-column.align-items-center > form > div.text-center{
+	
 }
 
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(6) {
@@ -411,7 +287,7 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 
 
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form{
-	width: 100%;
+	width: 50%;
 }
 
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(1)>label,
@@ -420,4 +296,19 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(4)>label,
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(5)>label {
 	width: 70px;
+}
+
+@media screen and (min-width: 1024px) {
+	header {		
+		min-height: 30%;
+		margin-bottom: 3%;		
+	}
+
+	body > h1{
+		margin-bottom: 3%;
+	}
+
+	body > div.col-8.mx-auto.d-flex.flex-column.align-items-center > form > div.text-center {
+		margin-bottom: 10%;
+	}
 }
