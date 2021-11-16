@@ -272,10 +272,6 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 	margin-bottom: 5%;
 }
 
-body > div.col-8.mx-auto.d-flex.flex-column.align-items-center > form > div.text-center{
-	
-}
-
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(6) {
 	display: flex;
 	align-items: center;
@@ -284,7 +280,6 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 	padding-left: 14%;
 	margin-bottom: 10%;
 }
-
 
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form{
 	width: 50%;
