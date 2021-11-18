@@ -1,21 +1,35 @@
 #accueil{
     height: 70vh;
 }
-
-
+#gotobot{
+	width: 100%;
+	position: absolute;
+	bottom: 2%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#arrowbot{
+	font-size: 4rem;
+	color: white;
+	height: 100px;
+	width: 100px;
+	border: 5px solid;
+	border-radius: 50%;
+}
+.displaynone {
+	display: none!important;
+}
 h1{
     font-family: 'Stick No Bills', sans-serif;
     font-size: 3em;
-    letter-spacing: 8px;
-	
+    letter-spacing: 8px;	
 }
-
 .form-check, .form-check-label, .quizz-btn{
     font-size: 3vh;
     padding-left: 0;
 }
-
-
 #accueil a {
     display: flex;
     width: 80%;
@@ -25,19 +39,19 @@ h1{
     justify-content: center;
     align-items: center;
 }
-
 #accueil > div{
     height: 100%;
     justify-content: space-evenly;
 }
-
 #masked{
     display: none;
 }
-
-#d1{background-color: #EECC4499;}
-#d2{background-color: #44EEAA99;}
-
+#d1{
+	background-color: #EECC4499;
+}
+#d2{
+	background-color: #44EEAA99;
+}
 html, body {
 	margin: 0;
 	padding: 0;
@@ -52,10 +66,9 @@ span, p, button, li {
 }
 header {
 	background-image: url(/images/plantes/flowersw.jpg);
-	min-height: 65%;
+	min-height: 96vh;
 	background-attachment: fixed;
-	background-repeat: no-repeat;
-	
+	background-repeat: no-repeat;	
 }
 .img {
 	position: relative;
@@ -86,7 +99,7 @@ header {
 	margin: 0;
 }
 #plante {
-	min-height: 400px;
+	min-height: 425px;
 	background-image: url(/images/plantes/abeliaun.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -99,7 +112,7 @@ header {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 25px;
+    font-size: 2rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
@@ -110,6 +123,8 @@ section:first-of-type {
 }
 section:first-of-type>p {
 	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 0;
 }
 section:first-of-type>h2 {
 	text-align: center;
@@ -117,9 +132,10 @@ section:first-of-type>h2 {
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     margin-bottom: 2%;
+	font-size: 1.8rem;
 }
 #arbre {
-	min-height: 400px;
+	min-height: 425px;
 	background-image: url(/images/plantes/flowerss.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -132,7 +148,7 @@ section:first-of-type>h2 {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 25px;
+    font-size: 2rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
@@ -141,16 +157,13 @@ section:last-of-type {
 	background-color: rgba(40, 61, 112, 0.9);
 	color: #fff;
 }
-section:last-of-type>div {
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
-	grid-auto-rows: 30px;
-	justify-content: center;
-	justify-items: center;
+#quizz{
+	display: flex;
+	justify-content: space-around;
 }
+
 section:last-of-type>div>a>button {
-	width: 100%;
-	height: 130%;
+	
 	background-color: white;
 	border: none;
 	border-radius: 4px;
@@ -158,9 +171,10 @@ section:last-of-type>div>a>button {
 	outline: none;
 	cursor: pointer;
 	text-transform: uppercase;
+	font-size: 1.6rem;
 }
 section:last-of-type>div>button {
-	height: 130%;
+	height: 200%;
 	background-color: white;
 	border: none;
 	border-radius: 4px;
@@ -168,6 +182,7 @@ section:last-of-type>div>button {
 	outline: none;
 	cursor: pointer;
 	text-transform: uppercase;
+	font-size: 1.6rem;
 }
 .btq:hover {
 	background-color: rgba(40, 61, 112, 0.9);
@@ -182,10 +197,11 @@ section:last-of-type>h2 {
 	letter-spacing: 5px;
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
+	font-size: 1.8rem;
 }
 #fleur {
-	min-height: 400px;
+	min-height: 425px;
 	background-image: url(/images/plantes/rose.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -198,7 +214,7 @@ section:last-of-type>h2 {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 25px;
+    font-size: 2rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
