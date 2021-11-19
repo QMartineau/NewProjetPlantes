@@ -31,8 +31,8 @@
 		<header class="img">
 
 			<nav class="navbar navbar-expand-lg navbar-light position-fixed w-100" aria-label="Fifth navbar example" id="navbar">
-				<div class="container-fluid">
-				
+
+				<div class="container-fluid">				
 					<a href="../home" class="navbar-brand d-flex align-self-start">
 						<i class="bi bi-flower3 h1"></i>
 						<strong class="h1">Ouvrier Du Paysage</strong>
@@ -63,9 +63,8 @@
 							</div>
 						</div>
 					</div>
-				</nav>
-
-				<div class="ms-4 fixed-top" id="langue">
+				</div>
+				<div class="ms-4" id="langue">
 					<div class="dropdown dropend">
 						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="bi bi-translate"></i>
@@ -81,6 +80,10 @@
 						</div>
 					</div>
 				</div>
+
+			</nav>
+
+				
 				<div id="gotobot">
 					<a id="arrowbot" href="#plant">
 						<i class="bi bi-arrow-down"></i>
@@ -93,12 +96,9 @@
 			{% block body %}{% endblock %}
 			<footer class="text-muted py-5" id="footer">
 				<div class="container">
-					<p class="float-end mb-1">
-						<a href="#" class="" id="gototop">Back to top</a>
-					</p>
+					<button onclick="topFunction()" id="gototop">Haut de la page</button>
 				</div>
 			</footer>
 		</body>
 	</body>
 </html>
-
