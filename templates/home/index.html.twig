@@ -4,8 +4,19 @@
 {% endblock %}
 
 {% block body %}
+	<div id="gotobot">
+		<a class="arrow" href="#plant">
+			<i class="bi bi-arrow-down"></i>
+		</a>
+	</div>
+
+	<div id="gototop" class="displaynone">
+		<a class="arrow" onclick="topFunction()">
+			<i class="bi bi-arrow-up"></i>
+		</a>
+	</div>
 	<div id="plant">
-		<i class="fab fa-pagelines fa-3x"></i>
+		<i class="fab fa-pagelines fa-5x"></i>
 	</div>
 	<div class="img" id="plante">
 		<span>Plantes</span>
@@ -24,17 +35,21 @@
 				<a href="quizz" class="button button-sign-in popup-button" data-modal="popup">
 			{% else %}
 				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
-
 			{% endif %}
 				<button class="btq">Quizz Normal</button>
-			</a>
+				</a>
 			{% if app.user %}
 				<a href="question.php?chrono=yes" class="button button-sign-in popup-button" data-modal="popup">
-				{% endif %}
+			{% else %}
+				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
+			{% endif %}
 				<button class="btq">Quizz Chronométré</button>
-			</a>
-			
+				</a>
+			{% if app.user %}
 				<a href="{{ url('listing') }}" class="button button-sign-in popup-button" data-modal="popup">
+			{% else %}
+				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
+			{% endif %}
 				<button class="btq">Plantes</button>
 				</a>
 			

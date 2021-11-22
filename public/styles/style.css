@@ -1,16 +1,24 @@
-#accueil{
-    height: 70vh;
-}
 #gotobot{
 	width: 100%;
 	position: absolute;
-	bottom: 2%;
+	bottom: 7%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-#arrowbot{
+#gototop {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.arrow{
 	font-size: 4rem;
 	color: white;
 	height: 100px;
@@ -29,19 +37,6 @@ h1{
 .form-check, .form-check-label, .quizz-btn{
     font-size: 3vh;
     padding-left: 0;
-}
-#accueil a {
-    display: flex;
-    width: 80%;
-    height: 20%;
-    margin: auto;
-    font-size: 3.5em;
-    justify-content: center;
-    align-items: center;
-}
-#accueil > div{
-    height: 100%;
-    justify-content: space-evenly;
 }
 #masked{
     display: none;
@@ -66,7 +61,7 @@ span, p, button, li {
 }
 header {
 	background-image: url(/images/plantes/flowersw.jpg);
-	min-height: 96vh;
+	min-height: 94vh;
 	background-attachment: fixed;
 	background-repeat: no-repeat;	
 }
@@ -162,28 +157,18 @@ section:last-of-type {
 	justify-content: space-around;
 }
 
-section:last-of-type>div>a>button {
-	
+.btq {	
 	background-color: white;
 	border: none;
 	border-radius: 4px;
-	box-shadow: none;
+	box-shadow: 3px 3px;
 	outline: none;
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 1.6rem;
+	padding: 0.5rem;
 }
-section:last-of-type>div>button {
-	height: 200%;
-	background-color: white;
-	border: none;
-	border-radius: 4px;
-	box-shadow: none;
-	outline: none;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-size: 1.6rem;
-}
+
 .btq:hover {
 	background-color: rgba(40, 61, 112, 0.9);
 	color: white;
@@ -201,7 +186,7 @@ section:last-of-type>h2 {
 	font-size: 1.8rem;
 }
 #fleur {
-	min-height: 425px;
+	min-height: 435px;
 	background-image: url(/images/plantes/rose.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -265,31 +250,12 @@ footer>ul>li:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
-
 #navbar{
 	z-index: 2;
 }
-
-#gototop {
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	z-index: 99;
-	border: none;
-	outline: none;
-	background-color: red;
-	color: white;
-	cursor: pointer;
-	padding: 15px;
-	border-radius: 10px;
-	font-size: 18px;
-}
-
 #myBtn:hover {
 	background-color: #555;
 }
-
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(1),
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(2),
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(3),
@@ -299,7 +265,6 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 	justify-content: space-between;
 	margin-bottom: 5%;
 }
-
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(6) {
 	display: flex;
 	align-items: center;
@@ -308,11 +273,9 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 	padding-left: 14%;
 	margin-bottom: 10%;
 }
-
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form{
 	width: 50%;
 }
-
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(1)>label,
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(2)>label,
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(3)>label,
@@ -320,17 +283,14 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(5)>label {
 	width: 70px;
 }
-
 @media screen and (min-width: 1024px) {
 	header {		
 		min-height: 30%;
 		margin-bottom: 3%;		
 	}
-
 	body > h1{
 		margin-bottom: 3%;
 	}
-
 	body > div.col-8.mx-auto.d-flex.flex-column.align-items-center > form > div.text-center {
 		margin-bottom: 10%;
 	}
