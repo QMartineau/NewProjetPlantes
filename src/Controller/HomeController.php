@@ -6,9 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Repository\PlantesRepository;
+use App\Repository\ImageRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Plantes;
+use App\Entity\Image;
 
 class HomeController extends AbstractController
 {
@@ -33,17 +35,27 @@ class HomeController extends AbstractController
 
 
     #[Route('/home/{id}', name: 'single')]
-    public function showSingleEvent(int $id , PlantesRepository $plantesRepository): Response
+    public function showSingleEvent(int $id, PlantesRepository $plantesRepository, ImageRepository $imageRepository): Response
     {
-        
+        $Culti = $imageRepository->find($id) ;
         $Plante = $plantesRepository->find($id) ;
         if (!$Plante) {
             throw $this->createNotFoundException('La table est vide');
         }
         
+        if (!$Culti) {
+            throw $this->createNotFoundException('La table est vide');
+        }
+
         return $this->render('home/single.html.twig', [
-            'Plante' => $Plante
+            'Plante' => $Plante,
+            'Culti' => $Culti
+
         ]);
+
+
+        
+        
     }
     
 }

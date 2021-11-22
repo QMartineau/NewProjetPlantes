@@ -13,6 +13,9 @@
           <h1>{{Plante.nom}}</h1>
           <h3>{{Plante.description}}</h3>
         </div>
+        <div>
+        <img src=" {{ asset('images/' ~ Culti.image ) }} " class="img-fluid rounded-start" alt="{{ Culti.image }}">
+        </div>
   </div>
 </main>
 {% endblock %}
