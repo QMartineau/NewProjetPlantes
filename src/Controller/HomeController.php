@@ -37,7 +37,22 @@ class HomeController extends AbstractController
     #[Route('/home/{id}', name: 'single')]
     public function showSingleEvent(int $id, PlantesRepository $plantesRepository, ImageRepository $imageRepository): Response
     {
-        $Culti = $imageRepository->find($id) ;
+        $Culti = $imageRepository->findBy(array('plantes'=> $id)) ;
+
+        $tab_img = [];
+
+        foreach($Culti as $item)
+        {
+            $tab_img [] = $item->getImage();
+        }
+        //dd($tab_img);
+
+    
+
+
+        
+        
+      
         $Plante = $plantesRepository->find($id) ;
         if (!$Plante) {
             throw $this->createNotFoundException('La table est vide');
@@ -49,7 +64,7 @@ class HomeController extends AbstractController
 
         return $this->render('home/single.html.twig', [
             'Plante' => $Plante,
-            'Culti' => $Culti
+            'tabImg' => $tab_img
 
         ]);
 
