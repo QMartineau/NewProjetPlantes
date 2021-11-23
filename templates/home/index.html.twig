@@ -5,7 +5,7 @@
 
 {% block body %}
 	<div id="gotobot">
-		<a class="arrow" href="#plant">
+		<a class="arrow" onclick="botFunction()">
 			<i class="bi bi-arrow-down"></i>
 		</a>
 	</div>
@@ -45,11 +45,15 @@
 			{% endif %}
 				<button class="btq">Quizz Chronométré</button>
 				</a>
-			{% if app.user %}
+			{# {% if app.user %}
 				<a href="{{ url('listing') }}" class="button button-sign-in popup-button" data-modal="popup">
 			{% else %}
 				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
 			{% endif %}
+				<button class="btq">Plantes</button>
+				</a> #}
+			
+				<a href="{{ url('listing') }}" class="button button-sign-in popup-button" data-modal="popup">			
 				<button class="btq">Plantes</button>
 				</a>
 			

@@ -20,7 +20,7 @@
 }
 .arrow{
 	font-size: 4rem;
-	color: white;
+	color: white!important;
 	height: 100px;
 	width: 100px;
 	border: 5px solid;
@@ -29,10 +29,19 @@
 .displaynone {
 	display: none!important;
 }
+i.bi-flower3{
+	font-size: 3.5rem;
+}
 h1{
     font-family: 'Stick No Bills', sans-serif;
     font-size: 3em;
     letter-spacing: 8px;	
+}
+strong.h1{
+	font-size: 3.5rem;
+}
+.connect>a{
+	font-size: 1.8rem;
 }
 .form-check, .form-check-label, .quizz-btn{
     font-size: 3vh;
@@ -252,6 +261,9 @@ footer>ul>li:hover {
 }
 #navbar{
 	z-index: 2;
+}
+.navbar-toggler-icon{
+	font-size: 3rem;
 }
 #myBtn:hover {
 	background-color: #555;

@@ -26,3 +26,7 @@ function displayNone() {
 function topFunction() {
     document.documentElement.scrollTop = 0;
 }
+
+function botFunction() {
+    document.documentElement.scrollTo(0, 1750);
+}
