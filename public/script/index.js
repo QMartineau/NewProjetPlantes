@@ -28,5 +28,5 @@ function topFunction() {
 }
 
 function botFunction() {
-    document.documentElement.scrollTo(0, 1750);
+    document.documentElement.scrollTo(0, 1710);
 }
