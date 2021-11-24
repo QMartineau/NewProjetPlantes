@@ -50,3 +50,13 @@ footer>ul>li:hover {
 .planti{
     
 }
+
+#gototop{
+    text-decoration: none;
+	color: black;
+}
+
+#gototop:hover{
+    text-decoration: none;
+	color: rgb(255, 255, 255);
+}
