@@ -44,8 +44,6 @@ footer {
 	text-align: center;
 	width: 100%;
 	align-self: flex-end;
-	position:absolute;
-	bottom: 0;
 }
 
 footer>h3 {
