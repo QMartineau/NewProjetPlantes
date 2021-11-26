@@ -59,10 +59,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $isVerified = false;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Qcm::class)
-     */
-    private $idQcm;
 
     /**
      * @ORM\ManyToMany(targetEntity=Plantes::class)
@@ -208,29 +204,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection|Qcm[]
-     */
-    public function getIdQcm(): Collection
-    {
-        return $this->idQcm;
-    }
-
-    public function addIdQcm(Qcm $idQcm): self
-    {
-        if (!$this->idQcm->contains($idQcm)) {
-            $this->idQcm[] = $idQcm;
-        }
-
-        return $this;
-    }
-
-    public function removeIdQcm(Qcm $idQcm): self
-    {
-        $this->idQcm->removeElement($idQcm);
-
-        return $this;
-    }
 
     /**
      * @return Collection|Plantes[]
