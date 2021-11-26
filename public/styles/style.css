@@ -69,3 +69,7 @@ footer>ul>li:hover {
 .navbar-toggler-icon {
 	font-size: 3rem;
 }
+
+.opacity0{
+	opacity: 0;
+}

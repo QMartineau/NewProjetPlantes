@@ -14,19 +14,16 @@ function displayNone() {
 
         document.getElementById("gotobot").className = "displaynone";
         document.getElementById("gototop").className = "";
+        document.getElementById("navbar").className = "displaynone";
         
     } else {
 
         document.getElementById("gotobot").className = "";
         document.getElementById("gototop").className = "displaynone";
+        document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light position-fixed w-100";
     }
 }
 
-
 function topFunction() {
     document.documentElement.scrollTop = 0;
-}
-
-function botFunction() {
-    document.documentElement.scrollTo(0, 1710);
 }

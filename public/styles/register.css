@@ -1,13 +1,13 @@
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    height: 27%;
+    height: 25%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 27%;
+    height: 25%;
     background-attachment: fixed;
     display: flex;
 }
@@ -17,18 +17,30 @@ footer {
 }
 
 .formulaire {
-    height: 46%;
+    height: 50%;
 }
-
 h1{
     font-size: 4rem;
 }
-
 .connexion>div{
     font-size: 2.5rem;
 }
-
+body>div.formulaire.d-flex.align-items-center>div>div>form>div:nth-child(6)>div{
+    font-size: 1.9rem;
+}
+body>div.formulaire.d-flex.align-items-center>div>div>form>div.col-8.mx-auto.d-block.text-center>div{
+    display: flex;
+    justify-content: space-around;
+}
+#registration_form_agreeTerms{
+    align-self: center;
+    height: 25px;
+    width: 25px;
+}
 .between>div{
     display: flex;
     justify-content: space-between;
+}
+.btn {
+    font-size: 2rem;
 }

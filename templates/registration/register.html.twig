@@ -11,10 +11,10 @@
     {% endfor %}    
 
     <div class="formulaire d-flex align-items-center">
-        <div class="connexion col-12">            
-            <div class="col-10 mx-auto">
-            <h1 class="text-center">Créer un compte</h1>
-                
+        <div class="connexion col-10 mx-auto d-flex align-items-center justify-content-center">            
+            <div class=" d-flex flex-column justify-content-center">
+
+                <h1 class="text-center">Créer un compte</h1>                
                 {{ form_start(registrationForm) }}
                 <div class="between mb-4">
                 {{ form_row(registrationForm.nom) }}
@@ -33,13 +33,13 @@
                     { label: 'Password'}) 
                 }}
                 </div>
-                <div class="between">                
+                <div class="col-8 mx-auto d-block text-center flex-row-reverse">                
                 {{ form_row(registrationForm.agreeTerms,
-                    { label: 'accepté les terms'}) 
+                    { label: 'Accepter les conditions'}) 
                 }}
                 </div>
-                <div>
-                    <button type="submit" class="btn btn-primary mx-auto d-block">Register</button>
+                <div class="registerbutton pt-5">
+                    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block">S'inscrire</button>
                 </div>    
 
                 {{ form_end(registrationForm) }}
