@@ -1,13 +1,13 @@
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    height: 25%;
+    height: 23%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 25%;
+    height: 23%;
     background-attachment: fixed;
     display: flex;
 }
@@ -17,12 +17,19 @@ footer {
 }
 
 .formulaire {
-    height: 50%;
+    height: 54%;
 }
 h1{
     font-size: 4rem;
 }
+.connexion{
+    width: 80%;
+    height: 100%;
+}
 .connexion>div{
+    font-size: 2.5rem;
+}
+.connexion>div>input{
     font-size: 2.5rem;
 }
 body>div.formulaire.d-flex.align-items-center>div>div>form>div:nth-child(6)>div{
