@@ -25,27 +25,7 @@ class Questions
     /**
      * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
      */
-    private $reponse1;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
-     */
-    private $reponse2;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
-     */
-    private $reponse3;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
-     */
-    private $reponse4;
-
-    /**
-     * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
-     */
-    private $reponseBon;
+    private $bonneReponse;
 
 
     public function getId(): ?int
@@ -65,65 +45,17 @@ class Questions
         return $this;
     }
 
-    public function getReponse1(): ?Reponses
+    public function getBonneReponse(): ?Reponses
     {
-        return $this->reponse1;
+        return $this->bonneReponse;
     }
 
-    public function setReponse1(?Reponses $reponse1): self
+    public function setBonneReponse(?Reponses $bonneReponse): self
     {
-        $this->reponse1 = $reponse1;
+        $this->bonneReponse = $bonneReponse;
 
         return $this;
     }
 
-    public function getReponse2(): ?Reponses
-    {
-        return $this->reponse2;
-    }
 
-    public function setReponse2(?Reponses $reponse2): self
-    {
-        $this->reponse2 = $reponse2;
-
-        return $this;
-    }
-
-    public function getReponse3(): ?Reponses
-    {
-        return $this->reponse3;
-    }
-
-    public function setReponse3(?Reponses $reponse3): self
-    {
-        $this->reponse3 = $reponse3;
-
-        return $this;
-    }
-
-    public function getReponse4(): ?Reponses
-    {
-        return $this->reponse4;
-    }
-
-    public function setReponse4(?Reponses $reponse4): self
-    {
-        $this->reponse4 = $reponse4;
-
-        return $this;
-    }
-
-    public function getReponseBon(): ?Reponses
-    {
-        return $this->reponseBon;
-    }
-
-    public function setReponseBon(?Reponses $reponseBon): self
-    {
-        $this->reponseBon = $reponseBon;
-
-        return $this;
-    }
-
-    
 }

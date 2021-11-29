@@ -18,34 +18,28 @@ class Reponses
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity=Questions::class, cascade={"persist", "remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=Questions::class)
      */
-    private $idQuestion;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $intitule;
+    private $question;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private $intitule;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIdQuestion(): ?Questions
+    public function getQuestion(): ?Questions
     {
-        return $this->idQuestion;
+        return $this->question;
     }
 
-    public function setIdQuestion(Questions $idQuestion): self
+    public function setQuestion(?Questions $question): self
     {
-        $this->idQuestion = $idQuestion;
+        $this->question = $question;
 
         return $this;
     }
@@ -55,21 +49,9 @@ class Reponses
         return $this->intitule;
     }
 
-    public function setIntitule(?string $intitule): self
+    public function setIntitule(string $intitule): self
     {
         $this->intitule = $intitule;
-
-        return $this;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
 
         return $this;
     }

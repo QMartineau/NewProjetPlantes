@@ -8,13 +8,16 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% for question in quiz %}
+    <h1>{{ question.intitule }}</h1>
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+     {{question.intitule}}
+         {% for reponse in Ques %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/bagab/OneDrive/Documents/GitHub/NewProjetPlantes/src/Controller/QuizController.php'|file_link(0) }}">src/Controller/QuizController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/bagab/OneDrive/Documents/GitHub/NewProjetPlantes/templates/quiz/index.html.twig'|file_link(0) }}">templates/quiz/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+        {% endfor %}
+  </label>
+{% endfor %}
+
 {% endblock %}
