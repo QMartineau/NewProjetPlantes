@@ -60,3 +60,17 @@ footer>ul>li:hover {
     text-decoration: none;
 	color: rgb(255, 255, 255);
 }
+
+.card>img{
+	width: 350xp;
+	height: 350xp;
+}
+
+.card{
+	height: 600px;
+}
+
+.card-title{
+	text-align: center;
+}
+

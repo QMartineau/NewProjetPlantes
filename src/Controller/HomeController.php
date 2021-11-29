@@ -47,11 +47,6 @@ class HomeController extends AbstractController
         }
         //dd($tab_img);
 
-    
-
-
-        
-        
       
         $Plante = $plantesRepository->find($id) ;
         if (!$Plante) {
