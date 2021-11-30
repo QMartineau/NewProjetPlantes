@@ -4,6 +4,8 @@
 {% endblock %}
 			
 {% block body %}
+<link rel="stylesheet" href="{{ asset('../styles/plante.css')}}">
+
 <main class="container-fluid">
   <div class="row">
       <div class="col-6 my-5">
@@ -14,5 +16,12 @@
           <h3>{{Plante.description}}</h3>
         </div>
   </div>
+  {% for Image in Images %}
+  <div>
+    <img src="{{ asset('images/' ~ Image.image ) }}" alt="">
+  </div>
+  {% endfor %}
 </main>
+<div class="img" id="fin"></div>
+
 {% endblock %}

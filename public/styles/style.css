@@ -70,6 +70,28 @@ footer>ul>li:hover {
 	font-size: 3rem;
 }
 
-.opacity0{
-	opacity: 0;
+@media screen and (min-width: 768px) {
+	i.bi-flower3 {
+		font-size: 2.5rem;
+	}
+
+	strong.h1 {
+		font-size: 2.5rem;
+	}
+
+	#langue>div>button {
+		font-size: 1rem;
+	}
+
+	#langue>div>div>a {
+		font-size: 1rem;
+	}
+
+	.connect>a {
+		font-size: 1rem;
+	}
+
+	.navbar-toggler-icon {
+		font-size: 2rem;
+	}
 }

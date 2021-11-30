@@ -33,50 +33,12 @@
     display: none !important;
 }
 
-/* i.bi-flower3 {
-    font-size: 3.5rem;
-} */
-
-/* h1 {
-    font-family: 'Stick No Bills', sans-serif;
-    font-size: 3em;
-    letter-spacing: 8px;
-} */
-
-/* #langue>div>button {
-    font-size: 1.8rem;
-}
-
-#langue>div>div>a {
-    font-size: 1.8rem;
-}
-
-strong.h1 {
-    font-size: 3.5rem;
-}
-
-.connect>a {
-    font-size: 1.8rem;
-} */
-
 .form-check,
 .form-check-label,
 .quizz-btn {
     font-size: 3vh;
     padding-left: 0;
 }
-
-/* html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-h2 {
-    font-family: 'Lato', sans-serif;
-} */
 
 span,
 p,
@@ -276,40 +238,6 @@ aside>p>span {
     display: flex;
 }
 
-/* footer {
-    color: white;
-    background-color: rgba(40, 61, 112, 0.9);
-    padding-top: 1%;
-    padding-bottom: 0.5%;
-    text-align: center;
-    width: 100%;
-    align-self: flex-end;
-}
-
-footer>h3 {
-    text-align: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
-}
-
-footer>ul {
-    list-style-type: none;
-}
-
-footer>ul>li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#navbar {
-    z-index: 2;
-}
-
-.navbar-toggler-icon {
-    font-size: 3rem;
-} */
-
 #myBtn:hover {
     background-color: #555;
 }
@@ -344,6 +272,45 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(5)>label {
     width: 70px;
 }
+
+@media screen and (min-width: 768px) {
+    header {
+        min-height: 85%;
+    }
+
+    body>h1 {
+        margin-bottom: 3%;
+    }
+
+    body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div.text-center {
+        margin-bottom: 10%;
+    }
+
+    #plant {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 15%;
+    }
+
+    #plant>i {
+        background-color: white;
+        color: rgba(40, 61, 112, 0.9);
+        font-size: 4rem;
+    }
+
+    #gotobot {
+        width: 100%;
+        position: absolute;
+        bottom: 18%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 
 @media screen and (min-width: 1024px) {
     header {
