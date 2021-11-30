@@ -19,6 +19,7 @@ footer {
 	text-align: center;
 	width: 100%;
 	align-self: flex-end;
+	
 }
 
 footer>h3 {
@@ -72,5 +73,9 @@ footer>ul>li:hover {
 
 .card-title{
 	text-align: center;
+}
+
+body{
+	height: 100vh;
 }
 

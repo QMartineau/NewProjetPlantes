@@ -12,11 +12,11 @@
     <h1>{{ question.intitule }}</h1>
     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
     <label class="form-check-label" for="flexCheckDefault">
-     {{question.intitule}}
-         {% for reponse in Ques %}
-
-
-        {% endfor %}
+         {% for intitule in Ques %}
+            {# {% if %} #}
+            <h1>{{intitule}}</h1>
+            {# {% endif %} #}
+         {% endfor %}
   </label>
 {% endfor %}
 
