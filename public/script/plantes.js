@@ -2,7 +2,7 @@ window.onscroll = function() {displayNone()};
 
 function displayNone() {
 
-    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 
         document.getElementById("gototop").className = "";
         document.getElementById("navbar").className = "displaynone";

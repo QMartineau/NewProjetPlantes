@@ -6,11 +6,11 @@
 //     document.getElementById("masked").style.display = "block";
 // }
 
-window.onscroll = function() {displayNone()};
+window.onscroll = function () { displayNone() };
 
 function displayNone() {
 
-    if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+    if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
 
         document.getElementById("gotobot").className = "displaynone";
         document.getElementById("gototop").className = "";

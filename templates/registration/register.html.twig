@@ -13,21 +13,21 @@
     <div class="formulaire d-flex align-items-center ">
         <div class="connexion mx-auto d-flex">            
             <div class=" d-flex flex-column justify-content-center w-100">
-                <h1 class="text-center">Créer un compte</h1>                
+                <h1 class="text-center h3">Créer un compte</h1>                
                 {{ form_start(registrationForm) }}
-                <div class="between mb-4">
+                <div class="">
                 {{ form_row(registrationForm.nom) }}
                 </div>                
-                <div class="between mb-4">
+                <div class="">
                 {{ form_row(registrationForm.prenom) }}
                 </div>
-                <div class="between mb-4">
+                <div class="">
                 {{ form_row(registrationForm.telephone) }}
                 </div>
-                <div class="between mb-4">
+                <div class="">
                 {{ form_row(registrationForm.email) }}
                 </div>
-                <div class="between mb-4">
+                <div class="">
                 {{ form_row(registrationForm.plainPassword, 
                     { label: 'Password'}) 
                 }}
@@ -37,7 +37,7 @@
                     { label: 'Accepter les conditions'}) 
                 }}
                 </div>
-                <div class="registerbutton pt-5">
+                <div class="registerbutton pt-1">
                     <button type="submit" class="btn btn-primary btn-lg mx-auto d-block">S'inscrire</button>
                 </div>    
 

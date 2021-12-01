@@ -1,35 +1,29 @@
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    height: 30%;
+    height: 27%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 30%;
+    height: 27%;
     background-attachment: fixed;
     display: flex;
 }
-footer {
-    display: none;
-}
-form{
-    height: 40%;
-}
 
-.h3{
-    font-size: 4rem;
+form{
+    height: 46%;
 }
 
 #connexion>div>label{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 #connexion>div>input{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 #connexion>div>div>button{
-    font-size: 2.5rem;
+    font-size: 1rem;
 }

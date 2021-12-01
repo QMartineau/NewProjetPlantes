@@ -1,10 +1,10 @@
 i.bi-flower3 {
-	font-size: 3.5rem;
+	font-size: 1.5rem;
 }
 
 h1 {
 	font-family: 'Stick No Bills', sans-serif;
-	font-size: 3em;
+	font-size: 1.5em;
 	letter-spacing: 8px;
 }
 
@@ -13,19 +13,19 @@ h2 {
 }
 
 #langue>div>button {
-	font-size: 1.8rem;
+	font-size: 0.8rem;
 }
 
 #langue>div>div>a {
-	font-size: 1.8rem;
+	font-size: 1rem;
 }
 
 strong.h1 {
-	font-size: 3.5rem;
+	font-size: 1.5rem;
 }
 
 .connect>a {
-	font-size: 1.8rem;
+	font-size: 1rem;
 }
 
 html,
@@ -36,7 +36,7 @@ body {
 	width: 100%;
 }
 
-footer {
+/* footer {
 	color: white;
 	background-color: rgba(40, 61, 112, 0.9);
 	padding-top: 1%;
@@ -60,14 +60,14 @@ footer>ul {
 footer>ul>li:hover {
 	text-decoration: underline;
 	cursor: pointer;
-}
+} */
 
 #navbar {
 	z-index: 2;
 }
 
 .navbar-toggler-icon {
-	font-size: 3rem;
+	font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {

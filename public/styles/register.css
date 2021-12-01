@@ -1,42 +1,34 @@
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    height: 20%;
+    height: 18%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 20%;
+    height: 18%;
     background-attachment: fixed;
     display: flex;
 }
-
-footer {
-    display: none;
-}
-
 .formulaire {
-    height: 60%;
-}
-h1{
-    font-size: 4rem;
+    height: 64%;
 }
 .connexion{
     width: 80%;
     height: 100%;
 }
 .connexion>div{
-    font-size: 2.5rem;
+    font-size: 0.7rem;
 }
 .connexion>div>input{
-    font-size: 2.5rem;
+    font-size: 0.7rem;
 }
 
 .form-control{
-    font-size: 2.5rem;
+    font-size: 0.7rem;
 }
 
 .btn{
-    font-size: 2.5rem;
+    font-size: 0.7rem;
 }
