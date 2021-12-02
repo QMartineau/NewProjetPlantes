@@ -8,19 +8,30 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
+{# <h1>{{questions.question.question}}</h1>
+<h1>{{questions.reponses[0].reponse}}</h1>
+<h1>{{questions.reponses[1].reponse}}</h1> #}
+
 {% for quest in questions %}
-    {# {% if totalquest.id == [1] %}  #}
-        <h1>{{quest}}</h1>
+
+    {# {% if  == [1] %}  #}
+        <h1>{{quest.question.question}}</h1>
+          {% for repon in quest.reponses %} 
+            <h1>{{repon.reponse}}</h1>
+          {% endfor %}
+       {# <h1>{{quest.reponses.question}}</h1> #}
+        
+
     {# {% endif %} #}
-         {% for repon in reponses %}
+         {# {% for repon in reponses %} #}
             {# {% if %} #}
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="{{repon}}" name="{{repon}}" value="{{repon}}" required />
-                <label class="custom-control-label" for="{{repon}}">{{repon}}</label>
-            </div>
+            {# <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="" name="" value="" required />
+                <label class="custom-control-label" for=""></label>
+            </div> #}
             {# {% endif %} #}
-         {% endfor %}
-  </label>
+         {# {% endfor %} #}
+  {# </label> #}
 {% endfor %}
 
 {% endblock %}

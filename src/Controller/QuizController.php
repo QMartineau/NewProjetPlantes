@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Questions;
 use App\Entity\Reponses;
 use App\Repository\QuestionsRepository;
 use App\Repository\ReponsesRepository;
@@ -16,59 +17,114 @@ class QuizController extends AbstractController
     public function index(int $id,QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
     {
         
+        $listQuestions = array(); 
         $questions = $questionsRepository->findAll();
 
+        foreach($questions as $i => $value){
+            $TempoQuiz = new ListeQuestions(); 
 
-        $tab_quest =[];
+            $reponses = $reponsesRepository->findBy(['questions'=>$value->getIdQuestion()]);
+            
+            //dd($reponses);
+            // foreach($reponses as $t => $val){
+                
 
-        foreach($questions as $data)
-        {
-            $tab_quest[] = $data ->getQuestion();
+            //     $t++;
+            // }
+            $TempoQuiz->setQuestion($value);
+            $TempoQuiz->setReponses($reponses);
+            array_push($listQuestions, $TempoQuiz );
+
+
+            $i++; 
         }
+        //dd($listQuestions);
 
-        // dd($tab_quest);
+    //     $questions = $questionsRepository->findAll();
+
+
+    //     $tab_quest =[];
+
+    //     foreach($questions as $data)
+    //     {
+    //         $tab_quest[] = $data ->getQuestion();
+    //     }
+
+        
     
-        $reponses = $reponsesRepository->findBy(array('questions' => $id));
+    //     $reponses = $reponsesRepository->findBy(array('questions' => $id));
         
-        $tab_rep = [];
+    //     $tab_rep = [];
 
-        foreach($reponses as $item)
-        {
-            $tab_rep [] = $item->getReponse();
-        }
+    //     foreach($reponses as $item)
+    //     {
+    //         $tab_rep [] = $item->getReponse();
+    //     }
     
-      
+    //   dd($tab_rep);
 
         
 
-        //  dd($tab_rep);
+    //     //  dd($tab_rep);
         
         
-        if (!$questions) {
-            throw $this->createNotFoundException('La table est vide question');
-        }
-        if (!$reponses) {
-            throw $this->createNotFoundException('La table est vide reponses');
-        }
+    //     if (!$questions) {
+    //         throw $this->createNotFoundException('La table est vide question');
+    //     }
+    //     if (!$reponses) {
+    //         throw $this->createNotFoundException('La table est vide reponses');
+    //     }
         
         
-        //Crer une liste de questions 
-        //pour chaque question que tu vas trouver dans ta base de données 
-        //tu vas aller chercher toute les réponse qui sont rataché a cette question
+    //     //Crer une liste de questions 
+    //     //pour chaque question que tu vas trouver dans ta base de données 
+    //     //tu vas aller chercher toute les réponse qui sont rataché a cette question
 
+    //     return $this->render('quiz/index.html.twig', [
+    //         'controller_name' => 'QuizController',
+    //         'questions' => $tab_quest,
+    //         'reponses' => $tab_rep,
+            
+            
+            
+    //     ]);
+    //dd($listQuestions); 
         return $this->render('quiz/index.html.twig', [
             'controller_name' => 'QuizController',
-            'questions' => $tab_quest,
-            'reponses' => $tab_rep,
-            
-            
-            
+            'questions' => $listQuestions,
         ]);
-    }
+     
+     }
 
 }
-    // class ListeQuestions{
+    class ListeQuestions{
 
-    //     // public Questions $question = new Questions(); 
-    //     // public list<Reponses> $Reponses = new list<Reponses>();  
-    // }
+         private Questions $question; 
+         private  array $reponses;  
+
+
+         public function __construct(){
+
+         }
+         
+             
+         public function getQuestion(): ?Questions
+         {
+             return $this->question; 
+         }
+
+         public function setQuestion(Questions $question): void
+         {
+             $this->question = $question;
+         }
+
+         public function getReponses(): ?array{
+            return $this->reponses; 
+         }
+
+         public function setReponses(array $reponses): void
+         {
+             $this->reponses = $reponses;
+         }
+
+    }
