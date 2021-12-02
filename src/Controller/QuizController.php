@@ -13,27 +13,29 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuizController extends AbstractController
 {
     #[Route('/quiz/{id}', name: 'quiz')]
-    public function index( int $id , QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
+    public function index(int $id, QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
     {
         
-        $Ques = $questionsRepository->findAll($id) ;
-        $Cultis = $reponsesRepository->findby(array('question' => $id)) ;
+        $questions = $questionsRepository->findAll();
+        
+
+        $reponses = $reponsesRepository->findBy(array('questions' => $id));
 
         $tab_rep = [];
 
-        foreach($Cultis as $item)
+        foreach($reponses as $item)
         {
-            $tab_rep [] = $item->getIntitule();
+            $tab_rep [] = $item->getReponse();
         }
-        // $Qest = $questionsRepository->findAll(); 
+
+        // dd($questions);
+        // dd($reponses);
         
-
-
-        // dd($tab_rep);
-        if (!$Cultis) {
+        
+        if ($questions) {
             throw $this->createNotFoundException('La table est vide');
         }
-        if (!$Ques) {
+        if ($reponses) {
             throw $this->createNotFoundException('La table est vide');
         }
         
@@ -43,8 +45,9 @@ class QuizController extends AbstractController
 
         return $this->render('quiz/index.html.twig', [
             'controller_name' => 'QuizController',
-            'Ques' => $tab_rep,
-            'quiz' => $Ques,
+            'questions' => $questions,
+            'reponses' => $tab_rep,
+            
             
         ]);
     }

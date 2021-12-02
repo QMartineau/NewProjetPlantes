@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use App\Repository\QuestionsRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -20,40 +22,72 @@ class Questions
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $intitule;
-
+    private $question;
+ 
     /**
-     * @ORM\OneToOne(targetEntity=Reponses::class, cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\Reponses", mappedBy="questions")
      */
-    private $bonneReponse;
-
-
-    public function getId(): ?int
+    private $reponses;
+ 
+    public function __construct()
     {
         return $this->id;
+        $this->reponses = new ArrayCollection();
     }
-
-    public function getIntitule(): ?string
+ 
+    
+    public function getIdQuestion(): ?int
     {
-        return $this->intitule;
+        return $this->idQuestion;
     }
-
-    public function setIntitule(string $intitule): self
+ 
+    public function setIdQuestion(int $idQuestion): self
     {
-        $this->intitule = $intitule;
-
+        $this->idQuestion = $idQuestion;
+ 
         return $this;
     }
-
-    public function getBonneReponse(): ?Reponses
+ 
+    public function getQuestion(): ?string
     {
-        return $this->bonneReponse;
+        return $this->question;
     }
-
-    public function setBonneReponse(?Reponses $bonneReponse): self
+ 
+    public function setQuestion(string $question): self
     {
-        $this->bonneReponse = $bonneReponse;
-
+        $this->question = $question;
+ 
+        return $this;
+    }
+ 
+    /**
+     * @return Collection|Reponses[]
+     */
+    public function getReponses(): Collection
+    {
+        return $this->reponses;
+    }
+ 
+    public function addReponse(Reponses $reponse): self
+    {
+        if (!$this->reponses->contains($reponse)) {
+            $this->reponses[] = $reponse;
+            $reponse->setQuestions($this);
+        }
+ 
+        return $this;
+    }
+ 
+    public function removeReponse(Reponses $reponse): self
+    {
+        if ($this->reponses->contains($reponse)) {
+            $this->reponses->removeElement($reponse);
+            // set the owning side to null (unless already changed)
+            if ($reponse->getQuestions() === $this) {
+                $reponse->setQuestions(null);
+            }
+        }
+ 
         return $this;
     }
 

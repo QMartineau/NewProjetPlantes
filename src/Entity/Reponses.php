@@ -17,42 +17,69 @@ class Reponses
      */
     private $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Questions::class)
+   /**
+     * @ORM\Column(type="integer", name="idQuestion")
      */
-    private $question;
-
+    private $idQuestion;
+ 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $intitule;
-
-    public function getId(): ?int
+    private $reponse;
+ 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Questions", inversedBy="reponses")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $questions;
+ 
+ 
+    public function getIdReponse(): ?int
     {
         return $this->id;
+        return $this->idReponse;
     }
-
-    public function getQuestion(): ?Questions
+ 
+    public function setIdReponse(int $idReponse): self
     {
-        return $this->question;
-    }
-
-    public function setQuestion(?Questions $question): self
-    {
-        $this->question = $question;
-
+        $this->idReponse = $idReponse;
+ 
         return $this;
     }
-
-    public function getIntitule(): ?string
+ 
+    public function getIdQuestion(): ?int
     {
-        return $this->intitule;
+        return $this->idQuestion;
     }
-
-    public function setIntitule(string $intitule): self
+ 
+    public function setIdQuestion(int $idQuestion): self
     {
-        $this->intitule = $intitule;
-
+        $this->idQuestion = $idQuestion;
+ 
+        return $this;
+    }
+ 
+    public function getReponse(): ?string
+    {
+        return $this->reponse;
+    }
+ 
+    public function setReponse(string $reponse): self
+    {
+        $this->reponse = $reponse;
+ 
+        return $this;
+    }
+ 
+    public function getQuestions(): ?Questions
+    {
+        return $this->questions;
+    }
+ 
+    public function setQuestions(?Questions $questions): self
+    {
+        $this->questions = $questions;
+ 
         return $this;
     }
 }
