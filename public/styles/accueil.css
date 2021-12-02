@@ -18,10 +18,11 @@
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 
 .arrow {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: white !important;
     height: 80px;
     width: 80px;
@@ -309,15 +310,7 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
     }
 
     .btq {
-        background-color: white;
-        border: none;
-        border-radius: 4px;
-        box-shadow: 3px 3px;
-        outline: none;
-        cursor: pointer;
-        text-transform: uppercase;
         font-size: 1.2rem;
-
     }
 }
 
@@ -326,14 +319,21 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
 @media screen and (min-width: 1024px) {
     header {
         min-height: 30%;
-        margin-bottom: 3%;
     }
 
-    body>h1 {
-        margin-bottom: 3%;
+    #plant {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
     }
 
-    body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div.text-center {
-        margin-bottom: 10%;
+    #plant>i {
+        background-color: white;
+        color: rgba(40, 61, 112, 0.9);
+        padding: 2% 0 2% 0;
+        margin: 0;
+        font-size: 3.3rem;
     }
 }

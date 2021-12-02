@@ -6,18 +6,18 @@
 {% block body %}
 	<link rel="stylesheet" href="{{ asset('../styles/accueil.css')}}" >
 
-	<div id="gotobot">
-		<a class="arrow" href="#plant">
+	<div id="gotobot" class="d-lg-none">
+		<a class="arrow d-flex justify-content-center align-items-center" href="#plant">
 			<i class="bi bi-arrow-down"></i>
 		</a>
 	</div>
 
 	<div id="gototop" class="displaynone">
-		<a class="arrow" onclick="topFunction()">
+		<a class="arrow d-flex justify-content-center align-items-center" onclick="topFunction()">
 			<i class="bi bi-arrow-up"></i>
 		</a>
 	</div>
-	<div id="plant">
+	<div id="plant" data-spy-target="plant">
 		<i class="fab fa-pagelines fa-5x p-md-0" onclick="topFunction()"></i>
 	</div>
 	<div class="img" id="plante">
@@ -25,14 +25,14 @@
 	</div>
 	<section class="p-5">
 		<h2>Description</h2>
-		<p>Si vous souhaitez faire un quizz basique, sélectionnez QUIZZ NORMAL, si vous souhaitez un peu plus de challenge, vous pouvez faire un quizz chronométré.</p>
+		<p>Si vous souhaitez faire un quizz basique, sélectionnez QUIZZ NORMAL, si vous souhaitez un peu plus de challenge, vous pouvez faire un QUIZZ CHRONOMETRE.</p>
 	</section>
 	<div class="img" id="arbre">
 		<span>Arbres</span>
 	</div>
 	<section class="p-0 pt-5 pb-5">
 		<h2>Choix</h2>
-		<div id="quizz" class="col-12 col-md-10 p-0 justify-content-between mx-auto">
+		<div id="quizz" class="col-11 col-md-10 col-lg-12 p-0 justify-content-between justify-content-lg-around mx-auto">
 			{% if app.user %}
 				<a href="quizz" class="button button-sign-in popup-button" data-modal="popup">
 			{% else %}
