@@ -13,23 +13,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuizController extends AbstractController
 {
     #[Route('/quiz/{id}', name: 'quiz')]
-    public function index(int $id, QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
+    public function index(QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
     {
         
         $questions = $questionsRepository->findAll();
         
 
-        $reponses = $reponsesRepository->findBy(array('questions' => $id));
+        $reponses = $reponsesRepository->findAll();
 
-        $tab_rep = [];
+        
 
-        foreach($reponses as $item)
-        {
-            $tab_rep [] = $item->getReponse();
-        }
-
-        // dd($questions);
-        // dd($reponses);
+         dd($questions);
+         dd($reponses);
         
         
         if ($questions) {
@@ -46,7 +41,7 @@ class QuizController extends AbstractController
         return $this->render('quiz/index.html.twig', [
             'controller_name' => 'QuizController',
             'questions' => $questions,
-            'reponses' => $tab_rep,
+            'reponses' => $reponses,
             
             
         ]);
