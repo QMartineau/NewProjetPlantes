@@ -38,12 +38,12 @@ class Questions
     
     public function getIdQuestion(): ?int
     {
-        return $this->idQuestion;
+        return $this->id;
     }
  
     public function setIdQuestion(int $idQuestion): self
     {
-        $this->idQuestion = $idQuestion;
+        $this->id = $idQuestion;
  
         return $this;
     }

@@ -13,26 +13,44 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuizController extends AbstractController
 {
     #[Route('/quiz/{id}', name: 'quiz')]
-    public function index(QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
+    public function index(int $id,QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
     {
         
         $questions = $questionsRepository->findAll();
-        
 
-        $reponses = $reponsesRepository->findAll();
 
-        
+        $tab_quest =[];
 
-         dd($questions);
-         dd($reponses);
-        
-        
-        if ($questions) {
-            throw $this->createNotFoundException('La table est vide');
+        foreach($questions as $data)
+        {
+            $tab_quest[] = $data ->getQuestion();
         }
-        if ($reponses) {
-            throw $this->createNotFoundException('La table est vide');
+
+        // dd($tab_quest);
+    
+        $reponses = $reponsesRepository->findBy(array('questions' => $id));
+        
+        $tab_rep = [];
+
+        foreach($reponses as $item)
+        {
+            $tab_rep [] = $item->getReponse();
         }
+    
+      
+
+        
+
+        //  dd($tab_rep);
+        
+        
+        if (!$questions) {
+            throw $this->createNotFoundException('La table est vide question');
+        }
+        if (!$reponses) {
+            throw $this->createNotFoundException('La table est vide reponses');
+        }
+        
         
         //Crer une liste de questions 
         //pour chaque question que tu vas trouver dans ta base de données 
@@ -40,8 +58,9 @@ class QuizController extends AbstractController
 
         return $this->render('quiz/index.html.twig', [
             'controller_name' => 'QuizController',
-            'questions' => $questions,
-            'reponses' => $reponses,
+            'questions' => $tab_quest,
+            'reponses' => $tab_rep,
+            
             
             
         ]);

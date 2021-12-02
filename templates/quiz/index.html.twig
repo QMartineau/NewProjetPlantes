@@ -9,12 +9,15 @@
 </style>
 
 {% for quest in questions %}
-    <h1>{{ quest.question}}</h1>
-    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-    <label class="form-check-label" for="flexCheckDefault">
+    {# {% if totalquest.id == [1] %}  #}
+        <h1>{{quest}}</h1>
+    {# {% endif %} #}
          {% for repon in reponses %}
             {# {% if %} #}
-            <h1>{{repon.reponse}}</h1>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="{{repon}}" name="{{repon}}" value="{{repon}}" required />
+                <label class="custom-control-label" for="{{repon}}">{{repon}}</label>
+            </div>
             {# {% endif %} #}
          {% endfor %}
   </label>
