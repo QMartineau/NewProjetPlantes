@@ -1,0 +1,38 @@
+header {
+    background-image: url(/images/plantes/flowersw.jpg);
+    height: 18%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#fin {
+    background-image: url(/images/plantes/flowers.jpg);
+    height: 18%;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.formulaire {
+    height: 64%;
+}
+
+.connexion {
+    width: 80%;
+    height: 100%;
+}
+
+.connexion>div {
+    font-size: 0.7rem;
+}
+
+.connexion>div>input {
+    font-size: 0.7rem;
+}
+
+.form-control {
+    font-size: 0.7rem;
+}
+
+.btn {
+    font-size: 0.7rem;
+}
