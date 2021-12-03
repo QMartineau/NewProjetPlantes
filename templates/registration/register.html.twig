@@ -10,24 +10,25 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}    
 
-    <div class="formulaire d-flex align-items-center ">
+<div class="formulaire d-flex align-items-center col-md-8 col-lg-4 mx-auto">
+
         <div class="connexion mx-auto d-flex">            
             <div class=" d-flex flex-column justify-content-center w-100">
                 <h1 class="text-center h3">Créer un compte</h1>                
                 {{ form_start(registrationForm) }}
-                <div class="">
+                <div>
                 {{ form_row(registrationForm.nom) }}
                 </div>                
-                <div class="">
+                <div>
                 {{ form_row(registrationForm.prenom) }}
                 </div>
-                <div class="">
+                <div>
                 {{ form_row(registrationForm.telephone) }}
                 </div>
-                <div class="">
+                <div>
                 {{ form_row(registrationForm.email) }}
                 </div>
-                <div class="">
+                <div>
                 {{ form_row(registrationForm.plainPassword, 
                     { label: 'Password'}) 
                 }}

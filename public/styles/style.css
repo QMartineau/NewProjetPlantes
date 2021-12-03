@@ -97,7 +97,11 @@ footer>ul>li:hover {
 }
 
 @media screen and (min-width: 1024px) {
-    #navbar {
-        max-height: 10%;
-    }
+	#navbar{
+		max-height: 10%;
+	}
+	#langue {
+		position: absolute;
+		top: 100px;
+	}
 }
