@@ -82,7 +82,6 @@ class Questions
     {
         if ($this->reponses->contains($reponse)) {
             $this->reponses->removeElement($reponse);
-            // set the owning side to null (unless already changed)
             if ($reponse->getQuestions() === $this) {
                 $reponse->setQuestions(null);
             }

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\ListeQuestions;
 use App\Entity\Questions;
 use App\Entity\Reponses;
 use App\Repository\QuestionsRepository;
@@ -13,8 +14,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class QuizController extends AbstractController
 {
-    #[Route('/quiz/{id}', name: 'quiz')]
-    public function index(int $id,QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
+    #[Route('/quiz', name: 'quiz')]
+    public function index(QuestionsRepository $questionsRepository, ReponsesRepository $reponsesRepository): Response
     {
         
         $listQuestions = array(); 
@@ -25,7 +26,7 @@ class QuizController extends AbstractController
 
             $reponses = $reponsesRepository->findBy(['questions'=>$value->getIdQuestion()]);
             
-            //dd($reponses);
+            // dd($reponses);
             // foreach($reponses as $t => $val){
                 
 
@@ -38,7 +39,7 @@ class QuizController extends AbstractController
 
             $i++; 
         }
-        //dd($listQuestions);
+            // dd($listQuestions); 
 
     //     $questions = $questionsRepository->findAll();
 
@@ -97,34 +98,4 @@ class QuizController extends AbstractController
      }
 
 }
-    class ListeQuestions{
-
-         private Questions $question; 
-         private  array $reponses;  
-
-
-         public function __construct(){
-
-         }
-         
-             
-         public function getQuestion(): ?Questions
-         {
-             return $this->question; 
-         }
-
-         public function setQuestion(Questions $question): void
-         {
-             $this->question = $question;
-         }
-
-         public function getReponses(): ?array{
-            return $this->reponses; 
-         }
-
-         public function setReponses(array $reponses): void
-         {
-             $this->reponses = $reponses;
-         }
-
-    }
+    
