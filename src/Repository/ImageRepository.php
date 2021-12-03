@@ -36,7 +36,7 @@ class ImageRepository extends ServiceEntityRepository
     }
     */
 
-    /*
+    
     public function findOneBySomeField($value): ?Image
     {
         return $this->createQueryBuilder('i')
@@ -46,5 +46,5 @@ class ImageRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+    
 }

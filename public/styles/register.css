@@ -32,3 +32,10 @@ header {
 .btn{
     font-size: 0.7rem;
 }
+
+@media screen and (min-width: 1024px) {
+    #langue{
+        position: absolute;
+        top: 100px;
+    }
+}

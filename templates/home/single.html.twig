@@ -1,22 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DocumentationController!
+{% block title %} {{Plante.nom}}
 {% endblock %}
 			
 {% block body %}
 <link rel="stylesheet" href="{{ asset('../styles/plante.css')}}">
 
-<main class="container-fluid">
-  <div class="row">
-      <div class="col-6 my-5">
-        <img src=" {{ asset('images/' ~ Plante.image ) }} " class="img-fluid rounded-start" alt="{{ Plante.image }}">
-      </div>
-        <div class="col-6 my-5">
-          <h1>{{Plante.nom}}</h1>
-          <h3>{{Plante.description}}</h3>
-        </div>
+<main class="centre container-fluid">
+
+  <div id="back" class="d-lg-none">
+    <a class="arrow d-flex justify-content-center align-items-center" href="plantes">
+      <i class="bi bi-arrow-left"></i>
+    </a>
   </div>
+
+	<div class="row">
+		<h1 class="col-6 text-center w-100">{{Plante.nom}}</h1>
+		<div class="my-5 d-flex justify-content-around">
+			<img src=" {{ asset('images/plantes/' ~ Plante.image ) }} " class="img-fluid rounded-start col-2 rounded-circle " alt="{{ Plante.image }}">
+			{% for image in tabImg %}
+				<img src=" {{ asset('images/plantes/' ~ image  ) }} " class="img-fluid rounded-start col-2 rounded-circle " alt="{{ image }}">
+			{% endfor %}
+		</div>
+		<div class=" my-5">
+			<h3 class="col-12">{{Plante.description}}</h3>
+		</div>
+	</div>
 </main>
+
 <div class="img" id="fin"></div>
 
 {% endblock %}
