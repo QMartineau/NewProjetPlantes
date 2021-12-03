@@ -33,11 +33,17 @@ header {
 
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 30%;
+    height: 20%;
     background-attachment: fixed;
     display: flex;
 }
 
 footer {
     display: none;
+}
+
+body>main>div.row>div.my-5.d-flex.flex-wrap.justify-content-around>img {
+    width: 50px!important;
+    height: 50px!important;
+    border-radius: 50%;
 }
