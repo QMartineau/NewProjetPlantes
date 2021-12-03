@@ -12,56 +12,9 @@
 		{% endblock %}
 
 {% block body %}
-<header class="img">
-    <nav class="navbar navbar-expand-lg navbar-light position-fixed w-100" aria-label="Fifth navbar example" id="navbar">
-				<div class="container-fluid">
-					<a href="../home" class="navbar-brand d-flex align-self-start">
-						<i class="bi bi-flower3"></i>
-						<strong>Ouvrier Du Paysage</strong>
-					</a>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+<link rel="stylesheet" href="{{ asset('../styles/plante.css')}}">
 
-					<div class="collapse navbar-collapse" id="navbarsExample05">
-						<div class="container-fluid">
-							<div class="row justify-content-end col-12">
-								<div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 py-4">
-									<p class="d-flex justify-content-end justify-content-around">
-										{% if app.user %}
-											<a href="logout" class="btn btn-primary my-2 ">Deconnexion</a>
-										{% else %}
-											<a href="/login" class="btn btn-primary my-2 me-4">Connexion</a>
-											<a href="register" class="btn btn-secondary my-2">Inscription</a>
-										{% endif %}
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</nav>
-
-				<div class="ms-4 fixed-top" id="langue">
-					<div class="dropdown dropend">
-						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-							<i class="bi bi-translate"></i>
-							Langue
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="index.php?lang=fr"><img src="../images/francais.png">Français</a>
-							<a class="dropdown-item" href="index.php?lang=en"><img src="../images/anglais.png">Anglais</a>
-							<a class="dropdown-item" href="#"><img src="../images/allemand.png">Allemand</a>
-							<a class="dropdown-item" href="#"><img src="../images/italien.png">Italien</a>
-							<a class="dropdown-item" href="#"><img src="../images/espagnol.png">Espagnol</a>
-							<a class="dropdown-item" href="#"><img src="../images/portugal.png">Portugais</a>
-						</div>
-					</div>
-				</div>
-</header>
-
-			
-
-<main class="centre container-fluid">
+<main class="container-fluid">
   <div class="row">
           <h1 class="col-6 text-center w-100">{{Plante.nom}}</h1>
       <div class="my-5 d-flex justify-content-around">
@@ -75,12 +28,6 @@
         </div>
   </div>
 </main>
+<div class="img" id="fin"></div>
 
-<footer class="text-muted py-5" id="footer">
-				<div class="container">
-					<p class="float-end mb-1">
-						<a href="#" class="" id="gototop">Back to top</a>
-					</p>
-				</div>
-			</footer>
 {% endblock %}

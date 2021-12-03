@@ -20,9 +20,9 @@ function displayNone() {
 
             document.getElementById("gotobot").className = "";
             document.getElementById("gototop").className = "displaynone";
-            document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light fixed-top w-100";
+            document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light sticky-top w-100";
         }
-    } else if (window.matchMedia("(min-width: 767px)").matches && window.matchMedia("(max-width: 1023px)").matches) {
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
 
         if (document.body.scrollTop > 525 || document.documentElement.scrollTop > 525) {
 
@@ -35,16 +35,6 @@ function displayNone() {
             document.getElementById("gotobot").className = "";
             document.getElementById("gototop").className = "displaynone";
             document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light sticky-top w-100";
-        }
-    } else if (window.matchMedia("(min-width: 1024px)").matches) {
-
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-
-            document.getElementById("gototop").className = "";
-        
-        } else {
-
-            document.getElementById("gototop").className = "displaynone";
         }
     }
 }

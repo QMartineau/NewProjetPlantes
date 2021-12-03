@@ -1,7 +1,7 @@
 #gotobot {
     width: 100%;
     position: absolute;
-    bottom: 7%;
+    bottom: 10%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -18,13 +18,14 @@
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 
 .arrow {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: white !important;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border: 5px solid;
     border-radius: 50%;
 }
@@ -33,50 +34,12 @@
     display: none !important;
 }
 
-/* i.bi-flower3 {
-    font-size: 3.5rem;
-} */
-
-/* h1 {
-    font-family: 'Stick No Bills', sans-serif;
-    font-size: 3em;
-    letter-spacing: 8px;
-} */
-
-/* #langue>div>button {
-    font-size: 1.8rem;
-}
-
-#langue>div>div>a {
-    font-size: 1.8rem;
-}
-
-strong.h1 {
-    font-size: 3.5rem;
-}
-
-.connect>a {
-    font-size: 1.8rem;
-} */
-
 .form-check,
 .form-check-label,
 .quizz-btn {
     font-size: 3vh;
     padding-left: 0;
 }
-
-/* html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-h2 {
-    font-family: 'Lato', sans-serif;
-} */
 
 span,
 p,
@@ -87,7 +50,7 @@ li {
 
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    min-height: 94vh;
+    min-height: 92vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -114,6 +77,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
+    height: 8vh;
 }
 
 #plant>i {
@@ -121,6 +85,7 @@ header {
     color: rgba(40, 61, 112, 0.9);
     padding: 2% 0 2% 0;
     margin: 0;
+    font-size: 2.5rem;
 }
 
 #plante {
@@ -138,7 +103,7 @@ header {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
@@ -151,7 +116,7 @@ section:first-of-type {
 
 section:first-of-type>p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0;
 }
 
@@ -161,7 +126,7 @@ section:first-of-type>h2 {
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     margin-bottom: 2%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 #arbre {
@@ -179,11 +144,10 @@ section:first-of-type>h2 {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
-
 section:last-of-type {
     padding: 50px 80px;
     background-color: rgba(40, 61, 112, 0.9);
@@ -203,8 +167,8 @@ section:last-of-type {
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 1.6rem;
-    padding: 0.5rem;
+    font-size: 0.9rem;
+    
 }
 
 .btq:hover {
@@ -223,7 +187,7 @@ section:last-of-type>h2 {
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     margin-bottom: 5%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 #fleur {
@@ -241,7 +205,7 @@ section:last-of-type>h2 {
     text-align: center;
     color: #fff;
     padding: 18px 0 18px 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 10px;
     text-transform: uppercase;
 }
@@ -258,6 +222,7 @@ aside>h2 {
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     margin-bottom: 2%;
+    font-size: 1.5rem;
 }
 
 aside>p {
@@ -275,40 +240,6 @@ aside>p>span {
     background-repeat: no-repeat;
     display: flex;
 }
-
-/* footer {
-    color: white;
-    background-color: rgba(40, 61, 112, 0.9);
-    padding-top: 1%;
-    padding-bottom: 0.5%;
-    text-align: center;
-    width: 100%;
-    align-self: flex-end;
-}
-
-footer>h3 {
-    text-align: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
-}
-
-footer>ul {
-    list-style-type: none;
-}
-
-footer>ul>li:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-#navbar {
-    z-index: 2;
-}
-
-.navbar-toggler-icon {
-    font-size: 3rem;
-} */
 
 #myBtn:hover {
     background-color: #555;
@@ -345,17 +276,64 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
     width: 70px;
 }
 
-@media screen and (min-width: 1024px) {
-    header {
-        min-height: 30%;
-        margin-bottom: 3%;
-    }
-
+@media screen and (min-width: 768px) {
+    
     body>h1 {
         margin-bottom: 3%;
     }
 
     body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div.text-center {
         margin-bottom: 10%;
+    }
+
+    #plant {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #plant>i {
+        background-color: white;
+        color: rgba(40, 61, 112, 0.9);
+        font-size: 2.9rem;
+    }
+
+    #gotobot {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btq {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    header {
+        min-height: 30%;
+    }
+
+    #plant {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+    }
+
+    #plant>i {
+        background-color: white;
+        color: rgba(40, 61, 112, 0.9);
+        padding: 2% 0 2% 0;
+        margin: 0;
+        font-size: 3.3rem;
     }
 }
