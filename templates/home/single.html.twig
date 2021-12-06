@@ -17,13 +17,13 @@
 	<div class="row">
 		<h1 class="text-center mx-auto">{{Plante.nom}}</h1>
 		<div class="my-5 d-flex flex-wrap justify-content-around">
-			<img src=" {{ asset('images/plantes/' ~ Plante.image ) }} " class="img-fluid col-6" alt="{{ Plante.image }}">
+			<img src=" {{ asset('images/plantes/' ~ Plante.image ) }} " class="img-fluid mb-2" alt="{{ Plante.image }}">
 			{% for image in tabImg %}
-			<img src=" {{ asset('images/plantes/' ~ image  ) }} " class="img-fluid col-6" alt="{{ image }}">
+			<img src=" {{ asset('images/plantes/' ~ image  ) }} " class="img-fluid mb-2" alt="{{ image }}">
 			{% endfor %}
 		</div>
 		<div class=" my-5">
-			<h3 class="col-12">{{Plante.description}}</h3>
+			<p class="fs-5 text-center">{{Plante.description}}</p>
 		</div>
 	</div>
 </main>

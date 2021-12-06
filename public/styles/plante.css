@@ -43,7 +43,17 @@ footer {
 }
 
 body>main>div.row>div.my-5.d-flex.flex-wrap.justify-content-around>img {
-    width: 50px!important;
-    height: 50px!important;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    transition: transform .5s;
+}
+
+img:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
+    border-radius: 0;
 }
