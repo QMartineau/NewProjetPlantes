@@ -35,7 +35,6 @@ class ImageRepository extends ServiceEntityRepository
         ;
     }
     */
-
     
     public function findOneBySomeField($value): ?Image
     {

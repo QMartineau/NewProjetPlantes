@@ -4,6 +4,21 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+.btn{
+    background-color: rgba(128, 0, 128, 0.70);
+    color: white;
+}
+main{
+    background-color: rgb(150, 162, 150);
+}
+.card{
+    background-color: rgb(220, 218, 219);
+}
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
 #gototop {
     position: fixed;
     bottom: 20px;
@@ -30,7 +45,7 @@ header {
 }
 
 #fin {
-    background-image: url(/images/plantes/flowers.jpg);
+    background-image: url(/images/plantes/chrysantem.jpg);
     height: 30%;
     background-attachment: fixed;
     display: flex;

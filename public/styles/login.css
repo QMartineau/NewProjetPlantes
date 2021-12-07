@@ -5,6 +5,12 @@ header {
     background-repeat: no-repeat;
 }
 
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
     height: 27%;

@@ -44,15 +44,8 @@ class HomeController extends AbstractController
         foreach($Culti as $item)
         {
             $tab_img [] = $item->getImage();
-        }
-        //dd($tab_img);
-
-    
-
-
+        }      
         
-        
-      
         $Plante = $plantesRepository->find($id) ;
         if (!$Plante) {
             throw $this->createNotFoundException('La table est vide');
@@ -66,11 +59,7 @@ class HomeController extends AbstractController
             'Plante' => $Plante,
             'tabImg' => $tab_img
 
-        ]);
-
-
-        
-        
+        ]);        
     }
     
 }

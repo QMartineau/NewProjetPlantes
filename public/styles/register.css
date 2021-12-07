@@ -1,22 +1,24 @@
 header {
     background-image: url(/images/plantes/flowersw.jpg);
-    height: 18%;
+    height: 20vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
 #fin {
     background-image: url(/images/plantes/flowers.jpg);
-    height: 18%;
+    height: 20vh;
     background-attachment: fixed;
     display: flex;
 }
 .formulaire {
-    height: 64%;
-}
-.connexion{
-    width: 80%;
-    height: 100%;
+    height: 60vh;
 }
 .connexion>div{
     font-size: 0.7rem;
@@ -24,11 +26,9 @@ header {
 .connexion>div>input{
     font-size: 0.7rem;
 }
-
 .form-control{
     font-size: 0.7rem;
 }
-
 .btn{
     font-size: 0.7rem;
 }
@@ -37,5 +37,21 @@ header {
     #langue{
         position: absolute;
         top: 100px;
+    }
+
+    .connexion>div {
+        font-size: 1rem;
+    }
+
+    .connexion>div>input {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
     }
 }

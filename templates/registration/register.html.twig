@@ -9,10 +9,10 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}    
 
-<div class="formulaire d-flex align-items-center col-md-8 col-lg-4 mx-auto">
+<div class="formulaire d-flex align-items-center col-md-8 col-lg-6 mx-auto">
 
         <div class="connexion mx-auto d-flex">            
-            <div class=" d-flex flex-column justify-content-center w-100">
+            <div class=" d-flex flex-column justify-content-center">
                 <h1 class="text-center h3">Créer un compte</h1>                
                 {{ form_start(registrationForm) }}
                 <div>
@@ -32,7 +32,7 @@
                     { label: 'Password'}) 
                 }}
                 </div>
-                <div class="col-8 mx-auto d-block text-center flex-row-reverse">                
+                <div class="col-11 mx-auto d-block text-center">                
                 {{ form_row(registrationForm.agreeTerms,
                     { label: 'Accepter les conditions'}) 
                 }}
