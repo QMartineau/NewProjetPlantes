@@ -1,14 +1,13 @@
 class Question {
-    constuctor(text, choices, answer) {
-        this.text = text;
-        this.choices = choices;
-        this.answer = answer;
-    }
-    isCorrectAnswer(choice) {
-        return this.answer === choice;
-    }
+  constructor(text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+  }
+  isCorrectAnswer(choice) {
+    return this.answer === choice;
+  }
 }
-
 let questions = [
   new Question("Quelle méthode Javascript permet de filtrer les éléments d'un tableau", ["indexOf()", "map()", "filter()", "reduce()"], "filter()"),
   new Question("Quelle méthode Javascript permet de vérifier si un élément figure dans un tableau", ["isNaN()","includes()", "findIndex()", "isOdd()"], "includes()"),
@@ -16,70 +15,78 @@ let questions = [
   new Question("Quel objet Javascript permet d'arrondir à l'entier le plus proche", ["Math.ceil()","Math.floor()", "Math.round()", "Math.random()"], "Math.round()")
 ];
 
+//console.log(questions);
+
 class Quiz {
-    constuctor(questions)  {
-        this.score = 0;
-        this.questions = questions;
-        this.currentQuestionIndex = 0;
+  constructor(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.currentQuestionIndex = 0;
+  }
+  getCurrentQuestion() {
+    return this.questions[this.currentQuestionIndex];
+  }
+  guess(answer) {
+    if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
+      this.score++;
     }
-    getCurrentQuestion() {
-        return this.questions[this.currentQuestionIndex];
-    }
-    guess(answer) {
-        if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
-            this.score++;
-        }
-        this.currentQuestionIndex++;
-    }
-    hasEnded() {
-        return this.currentQuestionIndex >= this.questions.length;
-    }
+    this.currentQuestionIndex++;
+  }
+  hasEnded() {
+    return this.currentQuestionIndex >= this.questions.length;
+  }
 }
 
-
-
-// regroup all functions relative to the app display
+// Regroup all  functions relative to the App Display
 const display = {
-    elementShown: function (id, text) {
-        let element = document.getElementById(id);
-        element.innerHTML = text;
-    },
-    endQuiz: function () {
-        let endQuizHTML = `
-        <h1>Quiz terminé !</h1>
-        <h3>Votre score est de : ${quiz.score} / ${quiz.question.length}</h3>`;
-        this.elementShown("question", endQuizHTML);
-    },
-    question: function () {
-        this.elementShown("question", quiz.getCurrentQuestion().text);
-    },
-    choices: function() {
-        let choices = quiz.getCurrentQuestion().choices;
-        guessHandler = (id, guess) => {
-            document.getElementById(id).onclick = function () {
-                quiz.guess(guess);
-                quizApp();
-            }
-        }
-        for (let i = 0; i < choices.length; i++){
-            this.elementShown("choice" + i, choices[i]);
-            guessHandler("guess" + i, choices[i]);
-        }
-    },
-}
+  elementShown: function(id, text) {
+    let element = document.getElementById(id);
+    console.log(element);
+    element.innerHTML = text;
+  },
+  endQuiz: function() {
+    endQuizHTML = `
+      <h1>Quiz terminé !</h1>
+      <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
+    this.elementShown("quiz", endQuizHTML);
+  },
+  question: function() {
+    this.elementShown("question", quiz.getCurrentQuestion().text);
+  },
+  choices: function() {
+    let choices = quiz.getCurrentQuestion().choices;
 
-
-// game logic
-quizApp = () => {
-    if (quiz.hasEnded()) {
-        display.endQuiz();
-    } else {
-        display.question();
-        display.choices();
-        //progress
+    guessHandler = (id, guess) => {
+      document.getElementById(id).onclick = function() {
+        quiz.guess(guess);
+        quizApp();
+      }
     }
-}
+    // display choices and handle guess
+    for(let i = 0; i < choices.length; i++) {
+      this.elementShown("choice" + i, choices[i]);
+      guessHandler("guess" + i, choices[i]);
+    }
+  },
+  progress: function() {
+    let currentQuestionNumber = quiz.currentQuestionIndex + 1;
+    this.elementShown("progress", "Question " + currentQuestionNumber + " sur " + quiz.questions.length);
+  },
+};
 
-// create quiz
+// Game logic
+quizApp = () => {
+  if (quiz.hasEnded()) {
+    display.endQuiz();
+  } else {
+    display.question();
+    display.choices();
+    display.progress();
+  } 
+}
+// Create Quiz
 let quiz = new Quiz(questions);
 quizApp();
+
+//console.log(quiz);
+
