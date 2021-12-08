@@ -35,31 +35,28 @@
 	<section class="p-0 pt-5 pb-5">
 		<h2>Choix</h2>
 		<div id="quizz" class="col-11 col-md-10 col-lg-12 p-0 justify-content-between justify-content-lg-around mx-auto">
-			{# {% if app.user %} #}
+			{% if app.user %} 
 				<a href="quizz" class="button button-sign-in popup-button" data-modal="popup">
+			{% else %} 
+				<a href="login" class="button button-sign-in popup-button" data-modal="popup"> 
+			{% endif %} 
+				<button class="btq">Quizz Normal</button>
+				</a>
+			{# {% if app.user %} #}
+				{# <a href="question.php?chrono=yes" class="button button-sign-in popup-button" data-modal="popup"> #}
 			{# {% else %} #}
 				{# <a href="login" class="button button-sign-in popup-button" data-modal="popup"> #}
 			{# {% endif %} #}
-				<button class="btq">Quizz Normal</button>
-				</a>
-			{% if app.user %}
-				<a href="question.php?chrono=yes" class="button button-sign-in popup-button" data-modal="popup">
-			{% else %}
-				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
-			{% endif %}
 				<button class="btq">Quizz Chronométré</button>
 				</a>
-			{# {% if app.user %}
+			{% if app.user %}
 				<a href="{{ url('listing') }}" class="button button-sign-in popup-button" data-modal="popup">
 			{% else %}
 				<a href="login" class="button button-sign-in popup-button" data-modal="popup">
 			{% endif %}
 				<button class="btq">Plantes</button>
-				</a> #}
-			
-				<a href="{{ url('listing') }}" class="button button-sign-in popup-button" data-modal="popup">			
-				<button class="btq">Plantes</button>
-				</a>
+				</a> 
+		
 			
 		</div>
 	</section>

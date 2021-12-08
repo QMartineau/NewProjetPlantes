@@ -163,11 +163,11 @@ section:last-of-type {
     background-color: white;
     border: none;
     border-radius: 4px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.432);
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.9rem;
+    transition: ease 0.5s;
     
 }
 
