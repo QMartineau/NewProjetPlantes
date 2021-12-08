@@ -9,13 +9,46 @@ class Question {
   }
 }
 let questions = [
-  new Question("Quelle méthode Javascript permet de filtrer les éléments d'un tableau", ["indexOf()", "map()", "filter()", "reduce()"], "filter()"),
-  new Question("Quelle méthode Javascript permet de vérifier si un élément figure dans un tableau", ["isNaN()","includes()", "findIndex()", "isOdd()"], "includes()"),
-  new Question("Quelle méthode transforme du JSON en un objet Javascript ?", ["JSON.parse()","JSON.stringify()", "JSON.object()", "JSON.toJS"], "JSON.parse()"),
-  new Question("Quel objet Javascript permet d'arrondir à l'entier le plus proche", ["Math.ceil()","Math.floor()", "Math.round()", "Math.random()"], "Math.round()")
-];
+  new Question("De quel genre est Abelia Edward Goucher?", ["Cotinus", "Abelia", "Exochorda", "Cytisus"], "Abelia"),
 
-//console.log(questions);
+  new Question("Quelle est le cultivar de l'Arbuste aux papillons Honeycomb?", ["Honeycomb","Royal Purple", "Edward Goucher", "Compactus"], "Honeycomb"),
+
+  new Question("Quelle est l'espece de l'Arbre à perruque Royal Purple?", ["Osmanthus","Coggygria", "Hibiscus", "Exochorda"], "Coggygria"),
+
+  new Question("Quelle est le nom de la plante qui a comme genre Cytisus et comme espece Cytisus?", ["Laurier des marais","Badiane de Floride", "Rose de Sharon", "Genêt à balais"], "Genêt à balais"),
+
+  new Question("De quel genre est la fleur Deutzia gracilis ?", ["Paeonia","Passiflora", "Rhaphiolepi", "Deutzia"], "Deutzia"),
+
+  new Question("Quelle est l'espece de l'Arbre aux perles The Bridge?", ["Macrantha","Suffruticos", "Polifolia", "Calycinum"], "Macrantha"),
+
+  new Question("Quelle est le cultivar de la Fusain ailé nain Euonymus Compactus ?", ["Honeycomb","Leonard", "Compactus", "The Bridge"], "Compactus"),
+
+  new Question("Quelle est l'espece de La barbe d'Aaron?", ["Laciniata","Weyeriana", "Syriacus", "Calycinum"], "Syriacus"),
+
+  new Question("De quel genre est Rose de Sharon?", ["Buddleia","Hypericum", "Cytisus", "Euonymus"], "Hypericum"),
+
+  new Question("Quelle est le cultivar de la Badiane de Floride ?", ["Melafan","Aucun", "Sorghoth", "Asphoria"], "Aucun"),
+
+  new Question("Quelle est l'espece de la Laurier des montagnes ?", ["Syriacus","Latifolia", "thuerpie", "Calsifone"], "Latifolia"),
+
+  new Question("De quel genre est la Laurier des marais ?", ["Kalmie","Kalmia", "Udile", "kulmia"], "Kalmia"),
+
+  new Question("Quelle est le cultivar de Corête du Japon Pleniflora ?", ["Aucun","Pleniflora", "Menphys", "sylfy"], "Pleniflora"),
+
+  new Question("Quelle est l'espece de la Fleur à franges rose ?", ["Cosalius","Syriacus", "Chinence", "Chinense"], "Chinense"),
+
+  new Question("De quel genre est la Magnolia Leonard Messel ?", ["Sormonsie","Magnolia", "Baratie", "rofusk"], "Magnolia"),
+
+  new Question("Quelle est le cultivar de l'Osmanthe de Delavay ?", ["kolecus","Osmanthus", "Aucun", "saphiria"], "Aucun"),
+
+  new Question("Quelle est l'espece de la Pivoine arbustive ?", ["Suffruticos","Helliasecus", "Syriacus", "Suffrutise"], "Suffruticos"),
+
+  new Question("De quel genre est Passiflore bleue ?", ["Passiflora","Philaflora", "Giseng", "Mephielotus"], "Passiflora"),
+
+  new Question("Quelle est le cultivar de l'Aubépine Indienne Pink Lady ?", ["Pink Lady","Red sweet", "Elegif", "Pink apple"], "Pink Lady"),
+
+  new Question("Quelle est l'espece de la Lilas persil ?", ["Suffruticos","Aucun", "Laciniata", "Syriacus"], "Laciniata")
+];
 
 class Quiz {
   constructor(questions) {
@@ -87,6 +120,4 @@ quizApp = () => {
 // Create Quiz
 let quiz = new Quiz(questions);
 quizApp();
-
-//console.log(quiz);
 

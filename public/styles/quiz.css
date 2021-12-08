@@ -1,20 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+header {
+    background-image: url(/images/plantes/flowersw.jpg);
+    height: 20vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+#fin {
+    background-image: url(/images/plantes/chrysantem.jpg);
+    height: 20vh;
+    background-attachment: fixed;
+    display: flex;
+}
+#quiz{
+    height: 60vh;
+}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-body {
-    font-family: "Josefin Sans", sans-serif;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    min-height: 100vh;
-    background: #2f3542;
-    color: #dfe4ea;
 }
 
 body h1 {
@@ -25,11 +36,11 @@ body h1 {
 
 body h1 span,
 body h1 i {
-    color: #ffa502;
+    color: rgba(128, 0, 128);
 }
 
 body h3 {
-    color: #ffa502;
+    color: rgba(128, 0, 128);
     font-size: 1.5rem;
 }
 
@@ -55,8 +66,9 @@ body .container .choices button {
 }
 
 body .container .choices button:hover {
-    background: #ffa502;
+    background: rgba(128, 0, 128);
     transition: 0.5s;
+    color: white;
 }
 
 body .container .choices button:active {
@@ -71,5 +83,5 @@ body .container .choices button p {
 
 body #progress {
     font-size: 1.3rem;
-    color: #ffa502;
+    color: rgba(128, 0, 128);
 }
