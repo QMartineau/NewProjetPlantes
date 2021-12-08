@@ -1,21 +1,17 @@
 {% extends 'base.html.twig' %}
 
-
 {% block title %}Quiz
 {% endblock %}
 
 {% block body %}
 <link rel="stylesheet" href="{{ asset('../styles/quiz.css')}}">
 
-
-
-
 <body>
+<div class="container mt-5 text-center">
 
-	<div class="container mt-5">
 		<div id="quiz">
-			<h1>
-				<span>Q</span>uiz
+			<h1 class="text-center my-2">
+				<span>Q</span>UIZ
 				<i class="far fa-question-circle"></i>
 			</h1>
 
@@ -23,21 +19,21 @@
 
 			<h3 id="score"></h3>
 
-			<div class="choices">
+			<div class="choices d-flex flex-wrap justify-content-around">
 				<button id="guess0" class="btn">
-					<p id="choice0"></p>
+					<p id="choice0" class="m-0"></p>
 				</button>
 
 				<button id="guess1" class="btn">
-					<p id="choice1"></p>
+					<p id="choice1" class="m-0"></p>
 				</button>
 
 				<button id="guess2" class="btn">
-					<p id="choice2"></p>
+					<p id="choice2" class="m-0"></p>
 				</button>
 
 				<button id="guess3" class="btn">
-					<p id="choice3"></p>
+					<p id="choice3" class="m-0"></p>
 				</button>
 			</div>
 
@@ -47,15 +43,8 @@
 	</div>
 	<div class="img" id="fin">
 	</div>
-
 </body>
-
-
 
 <script src="../script/quiz.js"></script>
 
-
-
-
 {% endblock %}
-

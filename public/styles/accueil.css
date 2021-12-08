@@ -159,26 +159,22 @@ section:last-of-type {
     justify-content: space-around;
 }
 
-.btq {
-    background-color: white;
+.btn {
+    background-color: rgba(128, 0, 128);
     border: none;
     border-radius: 4px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.432);
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    color: white;
     
 }
 
-.btq:hover {
-    background-color: rgba(128, 0, 128);
+.btn:hover {
+    background-color: rgb(206, 8, 206);
     color: white;
-}
-
-#btq2:hover {
-    background-color: white;
-    color: grey;
 }
 
 section:last-of-type>h2 {
@@ -309,7 +305,7 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
         align-items: center;
     }
 
-    .btq {
+    .btn {
         font-size: 1.2rem;
     }
 }
@@ -335,5 +331,8 @@ body>div.col-8.mx-auto.d-flex.flex-column.align-items-center>form>div:nth-child(
         padding: 2% 0 2% 0;
         margin: 0;
         font-size: 3.3rem;
+    }
+    .btn {
+        font-size: 1.3rem;
     }
 }
