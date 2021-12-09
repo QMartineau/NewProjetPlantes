@@ -6,13 +6,13 @@
 {% block body %}
 	<link rel="stylesheet" href="{{ asset('../styles/accueil.css')}}" >
 
-	<div id="gotobot" class="d-lg-none">
+	<div id="gotobot">
 		<a class="arrow d-flex justify-content-center align-items-center" href="#plant">
 			<i class="bi bi-arrow-down"></i>
 		</a>
 	</div>
 
-	<div id="gototop" class="displaynone">
+	<div id="gototop" class="d-none">
 		<a class="arrow d-flex justify-content-center align-items-center" onclick="topFunction()">
 			<i class="bi bi-arrow-up"></i>
 		</a>
@@ -36,21 +36,20 @@
 		<h2>Choix</h2>
 		<div id="quizz" class="flex-column flex-md-row col-11 col-md-10 col-lg-12 p-0 justify-content-between justify-content-lg-around mx-auto">
 			{% if app.user %} 
-				<a href="quizz" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">QUIZ</a>
+				<a href="quizz" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">QUIZ</a>
 			{% else %}
-				<a href="login" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">QUIZ</a>
+				<a href="login" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">QUIZ</a>
 			{% endif %}
 			{% if app.user %}
-				<a href="" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">A VENIR</a>
+				<a href="" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center disabled">A VENIR</a>
 			{% else %}
-				<a href="login" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">A VENIR</a>
+				<a href="login" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center disabled">A VENIR</a>
 			{% endif %}
 			{% if app.user %}
-				<a href="{{ url('listing') }}" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">PLANTES</a>
+				<a href="{{ url('listing') }}" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">PLANTES</a>
 			{% else %}
-				<a href="login" class="btn btn-warning my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">PLANTES</a>
-			{% endif %}					
-			
+				<a href="login" class="btn btn-violet my-2 me-2 p-1 p-lg-3 col-5 col-md-3 align-self-center">PLANTES</a>
+			{% endif %}
 		</div>
 	</section>
 	<div class="img" id="fleur">

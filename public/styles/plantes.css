@@ -4,10 +4,7 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.btn{
-    background-color: rgba(128, 0, 128, 0.70);
-    color: white;
-}
+
 main{
     background-color: rgb(150, 162, 150);
 }

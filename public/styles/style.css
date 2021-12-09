@@ -12,6 +12,11 @@ h2 {
 	font-family: 'Lato', sans-serif;
 }
 
+#langue {
+	position: absolute;
+	top: 50px;
+}
+
 #langue>div>button {
 	font-size: 0.8rem;
 	background-color: rgba(128,0,128);
@@ -79,6 +84,10 @@ body {
 		font-size: 2.5rem;
 	}
 
+	#langue {
+		top: 70px;
+	}
+
 	#langue>div>button {
 		font-size: 1rem;
 	}
@@ -96,12 +105,8 @@ body {
 	}
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 990px) {
 	#navbar{
 		max-height: 10%;
-	}
-	#langue {
-		position: absolute;
-		top: 100px;
 	}
 }
