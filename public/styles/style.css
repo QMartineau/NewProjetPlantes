@@ -13,8 +13,9 @@ h2 {
 }
 
 #langue {
-	position: absolute;
+	position: fixed;
 	top: 50px;
+	z-index: 10;
 }
 
 #langue>div>button {
@@ -29,13 +30,17 @@ h2 {
 	text-transform: uppercase;
 }
 
+#langue>div>div>a {
+	font-size: 1rem;
+}
+
+#langue>div>div>a>img{
+	margin-right: 5%;
+}
+
 .btn-violet{
 	background-color: rgba(128, 0, 128)!important;
 	color: white!important;
-}
-
-#langue>div>div>a {
-	font-size: 1rem;
 }
 
 strong.h1 {
@@ -118,6 +123,6 @@ body {
 	}
 
 	#langue {
-		top: 150px;
+		position: inherit;
 	}
 }

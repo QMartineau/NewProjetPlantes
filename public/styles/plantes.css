@@ -37,10 +37,6 @@ main{
     border-radius: 50%;
 }
 
-.displaynone {
-    display: none !important;
-}
-
 #fin {
     background-image: url(/images/plantes/chrysantem.jpg);
     height: 30%;
@@ -62,6 +58,14 @@ footer {
 
 h5{
     font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+
+    .card>img {
+        height: 180px;
+        width: 180px;
+    }
+
 }
 
 @media screen  and (min-width: 992px) {  

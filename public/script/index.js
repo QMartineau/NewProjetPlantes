@@ -7,12 +7,14 @@ function displayNone() {
             document.getElementById("gotobot").className = "d-none";
             document.getElementById("gototop").className = "";
             document.getElementById("navbar").className = "d-none";
+            document.getElementById("langue").className = "d-none";
         
         } else {
 
             document.getElementById("gotobot").className = "";
             document.getElementById("gototop").className = "d-none";
             document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light fixed-top w-100";
+            document.getElementById("langue").className = "ms-4";
         }
     } else if (window.matchMedia("(min-width: 767px)").matches && window.matchMedia("(max-width: 1023px)").matches) {
 
@@ -21,16 +23,18 @@ function displayNone() {
             document.getElementById("gotobot").className = "d-none";
             document.getElementById("gototop").className = "";
             document.getElementById("navbar").className = "d-none";
+            document.getElementById("langue").className = "d-none";
         
         } else {
 
             document.getElementById("gotobot").className = "";
             document.getElementById("gototop").className = "d-none";
             document.getElementById("navbar").className = "navbar navbar-expand-lg navbar-light sticky-top w-100";
+            document.getElementById("langue").className = "ms-4";
         }
     } else if (window.matchMedia("(min-width: 1024px)").matches) {
 
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
 
             document.getElementById("gototop").className = "";
         

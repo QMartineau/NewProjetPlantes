@@ -5,10 +5,10 @@
 
 {% block body %}
 <link rel="stylesheet" href="{{ asset('../styles/plantes.css')}}">
-<script src="../script/plantes.js"></script>
 
-<div id="gototop" class="displaynone">
-	<a class="arrow" onclick="topFunction()">
+
+<div id="gototop" class="d-none">
+	<a class="arrow d-flex justify-content-center align-items-center" onclick="topFunction()">
 		<i class="bi bi-arrow-up"></i>
 	</a>
 </div>
@@ -31,5 +31,6 @@
 </main>
 <div class="img" id="fin"></div>
 
-    
+<script src="../script/plantes.js"></script>
+
 {% endblock %}

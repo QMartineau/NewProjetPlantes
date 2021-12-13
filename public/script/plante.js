@@ -2,7 +2,7 @@ window.onscroll = function () { displayNone() };
 
 function displayNone() {
     if (window.matchMedia("(max-width: 767px)").matches) {
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
             document.getElementById("gototop").className = "";
             document.getElementById("navbar").className = "d-none";
@@ -16,7 +16,7 @@ function displayNone() {
         }
     } else if (window.matchMedia("(min-width: 767px)").matches && window.matchMedia("(max-width: 1023px)").matches) {
 
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
 
             document.getElementById("gototop").className = "";
             document.getElementById("navbar").className = "d-none";
