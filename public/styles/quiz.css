@@ -21,6 +21,12 @@ header {
     height: 60vh;
 }
 
+body .container .choices button:hover {
+    background: rgba(128, 0, 128);
+    transition: 0.5s;
+    color: white;
+}
+
 body .container .choices {    
     margin: 3rem auto 3rem;
 }

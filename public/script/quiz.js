@@ -70,7 +70,7 @@ class Quiz {
   }
 }
 
-// Regroup all  functions relative to the App Display
+// Regroupement de toutes les fonctions pour l'affichage
 const display = {
   elementShown: function(id, text) {
     let element = document.getElementById(id);
@@ -95,7 +95,7 @@ const display = {
         quizApp();
       }
     }
-    // display choices and handle guess
+    // affichage des choix et gérer la réponse
     for(let i = 0; i < choices.length; i++) {
       this.elementShown("choice" + i, choices[i]);
       guessHandler("guess" + i, choices[i]);
@@ -107,7 +107,7 @@ const display = {
   },
 };
 
-// Game logic
+// Affichage quiz
 quizApp = () => {
   if (quiz.hasEnded()) {
     display.endQuiz();
@@ -117,7 +117,6 @@ quizApp = () => {
     display.progress();
   } 
 }
-// Create Quiz
+// Créé un quiz
 let quiz = new Quiz(questions);
 quizApp();
-
