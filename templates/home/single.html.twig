@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{Plante.nom}}
+{% endblock %}
+			
+{% block body %}
+<link rel="stylesheet" href="{{ asset('../styles/plante.css')}}">
+
+<main class="centre container-fluid">
+
+	<div id="back" class="">
+		<a class="arrow d-flex justify-content-center align-items-center" href="plantes">
+			<i class="bi bi-arrow-left"></i>
+		</a>
+	</div>
+
+	<div id="gototop" class="d-none">
+		<a class="arrow d-flex justify-content-center align-items-center" onclick="topFunction()">
+			<i class="bi bi-arrow-up"></i>
+		</a>
+	</div>
+
+	<div class="row">
+		<h1 class="text-center mt-3 mb-lg-5">{{Plante.nom}}</h1>
+		<div class="my-5 d-flex flex-wrap justify-content-around">
+			<img src=" {{ asset('images/plantes/' ~ Plante.image ) }} " class="img-fluid mb-2" alt="{{ Plante.image }}">
+			{% for image in tabImg %}
+			<img src=" {{ asset('images/plantes/' ~ image  ) }} " class="img-fluid mb-2" alt="{{ image }}">
+			{% endfor %}
+		</div>
+		<div class="renseignement d-md-flex justify-content-md-evenly">
+			<p class="fw-bold col-md-3 text-center">Cultivar : {{ Plante.cultivar }}</p>
+			<p class="fw-bold col-md-3 text-center">Genre : {{ Plante.genre }}</p>
+			<p class="fw-bold col-md-3 text-center">Espèce : {{ Plante.espece }}</p>
+		</div>
+		<div class="mt-3 mb-5">
+			<h1 class="text-center">Description</h1>
+			<p class="fs-5 text-justify px-5 col-lg-7 mx-auto">{{Plante.description}}</p>
+		</div>
+</div>
+</main>
+
+<div class="img" id="fin"></div>
+
+<script src="../script/plante.js"></script>
+
+
+{% endblock %}

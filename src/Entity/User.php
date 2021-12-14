@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Il éxiste déjà un compte avec cette adresse mail")
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -44,9 +44,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="json", nullable=true)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @var string The hashed password
@@ -113,17 +113,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @see UserInterface
      */
-    public function getRoles(): ?string
+    public function getRoles(): array
     {
-        return $this->roles;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles []= 'ROLE_USER';
+
+        return array_unique($roles);
+        
     }
 
-    public function setRoles(string $roles): self
+    public function setRoles(array $roles): self
     {
         $this->roles = $roles;
 
         return $this;
     }
+
+    // public function __toString() /*convertir les dates en string */
+    // {
+    //     // return $this->getRoles();
+
+    // }
 
     /**
      * @see PasswordAuthenticatedUserInterface

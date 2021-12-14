@@ -1,34 +1,54 @@
+
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
 {% block body %}
+	<link rel="stylesheet" href="../styles/register.css">
+
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
-<link rel="stylesheet" href="../styles/footer.css">
+    {% endfor %}    
 
+<div class="formulaire d-flex align-items-center col-md-8 col-lg-6 mx-auto">
 
-    <h1 class="text-center">Créer un compte</h1>
-    <div class="col-6 mx-auto d-flex flex-column align-items-center">
+        <div class="connexion mx-auto d-flex">            
+            <div class=" d-flex flex-column justify-content-center">
+                <h1 class="text-center h3">Créer un compte</h1>                
+                {{ form_start(registrationForm) }}
+                <div>
+                {{ form_row(registrationForm.nom) }}
+                </div>                
+                <div>
+                {{ form_row(registrationForm.prenom) }}
+                </div>
+                <div>
+                {{ form_row(registrationForm.telephone) }}
+                </div>
+                <div>
+                {{ form_row(registrationForm.email) }}
+                </div>
+                <div>
+                {{ form_row(registrationForm.plainPassword, 
+                    { label: 'Password'}) 
+                }}
+                </div>
+                <div class="col-11 mx-auto d-block text-center">                
+                {{ form_row(registrationForm.agreeTerms,
+                    { label: 'Accepter les conditions'}) 
+                }}
+                </div>
+                <div class="registerbutton pt-1">
+                    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block">S'inscrire</button>
+                </div>    
 
-
-    {{ form_start(registrationForm) }}
-        
-        <div class="">
-        {{ form_row(registrationForm.email) }}
+                {{ form_end(registrationForm) }}
+            </div>
         </div>
-
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        
-        {{ form_row(registrationForm.agreeTerms) }}
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Register</button>
-        </div>
-
-    {{ form_end(registrationForm) }}
+    </div>
+    
+    <div class="img" id="fin">
     </div>
 
 {% endblock %}

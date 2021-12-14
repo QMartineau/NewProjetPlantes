@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DocumentationController!
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('../styles/plantes.css')}}">
+
+
+<div id="gototop" class="d-none">
+	<a class="arrow d-flex justify-content-center align-items-center" onclick="topFunction()">
+		<i class="bi bi-arrow-up"></i>
+	</a>
+</div>
+
+<main class="centre container-fluid">
+			<div class="row d-flex justify-content-evenly">
+			
+{% for Plante in Plantes %}
+<div class="card col-6 col-md-3 mx-md-1 my-4 col-lg-2">
+        
+        <img src="{{ asset('images/plantes/' ~ Plante.image )}}" class="card-img-top rounded-circle align-self-center mt-4" alt="...">
+        <div class="card-body d-flex flex-column justify-content-end">
+            <h5 class="card-title text-center">{{ Plante.nom }}</h5>
+        </div>
+        <a href="{{ url('home') }}/{{ Plante.id }}" class="btn btn-violet mb-2 text-center fs-4 d-block mx-auto" style="height: 3rem; width: 100%;">Voir</a>
+</div>
+
+{% endfor %}
+			</div>
+</main>
+<div class="img" id="fin"></div>
+
+<script src="../script/plantes.js"></script>
+
+{% endblock %}

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PlantesRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,14 +35,24 @@ class Plantes
     private $Cultivar;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="plantes")
      */
-    private $Image;
+    private $imageId;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="text")
      */
-    private $Verified;
+    private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
 
     public function getId(): ?int
     {
@@ -83,26 +95,68 @@ class Plantes
         return $this;
     }
 
-    public function getImage(): ?string
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImageId(): Collection
     {
-        return $this->Image;
+        return $this->imageId;
     }
 
-    public function setImage(string $Image): self
+    public function addImageId(Image $imageId): self
     {
-        $this->Image = $Image;
+        if (!$this->imageId->contains($imageId)) {
+            $this->imageId[] = $imageId;
+            $imageId->setPlantes($this);
+        }
 
         return $this;
     }
 
-    public function getVerified(): ?bool
+    public function removeImageId(Image $imageId): self
     {
-        return $this->Verified;
+        if ($this->imageId->removeElement($imageId)) {
+            // set the owning side to null (unless already changed)
+            if ($imageId->getPlantes() === $this) {
+                $imageId->setPlantes(null);
+            }
+        }
+
+        return $this;
     }
 
-    public function setVerified(bool $Verified): self
+    public function getDescription(): ?string
     {
-        $this->Verified = $Verified;
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
+
+    public function setNom(string $nom): self
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

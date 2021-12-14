@@ -3,7 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-// use App\Entity\Plantes;
+use App\Entity\Plantes;
 // use App\Entity\Qcm;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -35,6 +35,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToDashboard('Dashboard', 'fa fa-chess-board'),
             MenuItem::linkToRoute('Home', 'fa fa-home', 'home'),
             MenuItem::linkToCrud('Users', 'fas fa-child', User::class),
+            MenuItem::linkToCrud('Plantes', 'fas fa-leaf', Plantes::class),
         ];
     }
 }

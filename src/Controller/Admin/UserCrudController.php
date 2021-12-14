@@ -24,11 +24,12 @@ class UserCrudController extends AbstractCrudController
             TextField::new('password'),
             TextField::new('telephone'),
             ChoiceField::new('roles', 'Roles')
-                    ->autocomplete()
                     ->setChoices([  
-                            'Elève' => 'ROLE_USER',
-                            'Formateur' => 'ROLE_ADMIN'
-                            ]),
+                            'User' => 'ROLE_USER',
+                            'Admin' => 'ROLE_ADMIN'
+                            ])
+                            ->allowMultipleChoices()
+                            ->renderExpanded(true),
             BooleanField::new('is_verified'),
         ];
     }

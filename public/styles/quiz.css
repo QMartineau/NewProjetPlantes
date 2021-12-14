@@ -1,0 +1,34 @@
+header {
+    background-image: url(/images/plantes/flowersw.jpg);
+    height: 20vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+#fin {
+    background-image: url(/images/plantes/chrysantem.jpg);
+    height: 20vh;
+    background-attachment: fixed;
+    display: flex;
+}
+#quiz{
+    height: 60vh;
+}
+
+body .container .choices {    
+    margin: 3rem auto 3rem;
+}
+
+body .container .choices button {    
+    width: 150px;
+    height: 80px;
+    background: #dfe4ea;
+    font-weight: 600;
+    margin: 0.4rem;
+}

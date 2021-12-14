@@ -22,10 +22,13 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                        'message' => 'Vous devriez accepter nos terms',
                     ]),
                 ],
             ])
+            ->add('prenom')
+            ->add('nom')
+            ->add('telephone')
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
@@ -43,6 +46,25 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+        //     $builder->get('Roles')
+
+        //    ->addModelTransformer(new CallbackTransformer(
+
+        //        function ($rolesArray) {
+
+        //             // transform the array to a string
+
+        //             return count($rolesArray)? $rolesArray[0]: null;
+
+        //        },
+
+        //        function ($rolesString) {
+
+        //             // transform the string back to an array
+
+        //             return [$rolesString];
+
+        //        }
         ;
     }
 

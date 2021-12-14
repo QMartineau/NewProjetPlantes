@@ -1,0 +1,35 @@
+header {
+    background-image: url(/images/plantes/flowersw.jpg);
+    height: 27%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+#fin {
+    background-image: url(/images/plantes/chrysantem.jpg);
+    height: 27%;
+    background-attachment: fixed;
+    display: flex;
+}
+
+form{
+    height: 46%;
+}
+
+#connexion>div>label{
+    font-size: 1.5rem;
+}
+
+#connexion>div>input{
+    font-size: 1.5rem;
+}
+
+#connexion>div>div>button{
+    font-size: 1rem;
+}

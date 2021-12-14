@@ -1,55 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello QuizzController!
+{% block title %}Quiz
 {% endblock %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ asset('../styles/quiz.css')}}">
 
-	<h1 class="text-center mt-5">QUIZZ</h1>
+<body>
+<div class="container text-center">
 
-	<main id="quizz" class="container-fluid">
-		<form
-			class="row g-3 ">
-			{# <div class="form-check">
-			                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-			                    <label class="form-check-label" for="flexCheckDefault">
-			                        Option Hiver
-			                    </label>
-			                </div> #}
+		<div id="quiz" class="d-flex flex-column justify-content-center">
+			<h1 class="text-center">
+				<span>Q</span>UIZ
+				<i class="far fa-question-circle"></i>
+			</h1>
 
-			<div class="form-check">
-				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-				<label class="form-check-label" for="flexCheckDefault">
-					Chronométré
-				</label>
+			<h2 id="question"></h2>
+
+			<h3 id="score"></h3>
+
+			<div class="choices d-flex flex-wrap justify-content-around">
+				<button id="guess0" class="btn">
+					<p id="choice0" class="m-0"></p>
+				</button>
+
+				<button id="guess1" class="btn">
+					<p id="choice1" class="m-0"></p>
+				</button>
+
+				<button id="guess2" class="btn">
+					<p id="choice2" class="m-0"></p>
+				</button>
+
+				<button id="guess3" class="btn">
+					<p id="choice3" class="m-0"></p>
+				</button>
 			</div>
 
-			<div class="form-check">
-				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onchange="myFunction2()" checked>
-				<label class="form-check-label" for="exampleRadios1">
-					Plantes aléatoire
-				</label>
-			</div>
+			<p id="progress"></p>
 
-			<div class="form-check mb-5">
-				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onchange="myFunction()">
-				<label class="form-check-label" for="exampleRadios2">
-					Choisir les plantes
-				</label>
-			</div>
-		</form>
-	</main>
-
-	<div class="d-flex flex-column align-items-center">
-		<div class="col-auto" id="masked">
-			<button type="btn" class="btn btn-primary mb-3 quizz-btn px-3">Selectionnez vos plantes</button>
-		</div>
-
-		<div class="col-auto">
-			<button type="submit" class="btn btn-primary mb-3 quizz-btn px-3">Commencer</button>
 		</div>
 	</div>
+	<div class="img" id="fin">
+	</div>
+</body>
 
+<script src="../script/quiz.js"></script>
 
 {% endblock %}
-
