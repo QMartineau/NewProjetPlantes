@@ -34,7 +34,7 @@ class HomeController extends AbstractController
     }
 
 
-    #[Route('/home/{id}', name: 'single')]
+    #[Route('/home/plantes/{id}', name: 'single')]
     public function showSingleEvent(int $id, PlantesRepository $plantesRepository, ImageRepository $imageRepository): Response
     {
         $Culti = $imageRepository->findBy(array('plantes'=> $id)) ;
